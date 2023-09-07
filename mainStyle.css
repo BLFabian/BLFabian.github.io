@@ -25,12 +25,16 @@ body {
     background: var(--background-color);
 }
 
-.title {
-    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 30%, 85% 30%, 85% 0%);
-    padding-top: calc(var(--title-size)*0.15);
+.logoType {
     font-family: 'Houschka Pro';
     font-weight: 900;
     font-style: normal;
+}
+
+.title {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 30%, 85% 30%, 85% 0%);
+    padding-top: calc(var(--title-size)*0.15);
+
     font-size: var(--title-size);
     position: relative;
     width: fit-content;
