@@ -32,8 +32,11 @@ body {
 }
 
 .title {
-    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 27%, 87% 27%, 87% 0%);
+    background:red;
+    padding-top:5px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 31.8%, 85% 31.8%, 85% 0%);
     font-size: var(--title-size);
+    line-height:var(--title-size);
     position: relative;
     width: fit-content;
     height: fit-content;
