@@ -7,6 +7,11 @@ function createDot(containerName) {
     targetContainer.append(newDot);
 }
 
+function electricityCarbon() {
+    var targetTitle = document.getElementById('electricity').querySelector('.headerTitle');
+}
+
 createDot('processing');
 createDot('storage');
 createDot('transfer');
+electricityCarbon() 
