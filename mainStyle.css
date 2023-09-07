@@ -176,7 +176,6 @@ body {
     background: rgb(248,207,38);
     background: linear-gradient(40deg, rgba(248,207,38,1) 46%, rgba(255,84,79,1) 100%);
     color:white;
-    padding-bottom:-10px;
     animation: fauxIn 15s ease-in-out infinite;
 }
 
