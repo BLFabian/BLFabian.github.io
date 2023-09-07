@@ -1,19 +1,19 @@
 html {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 :root {
     padding: 0;
     margin: 0;
-    --title-size:min(20vw, 150px);
-    --header-size:min(2vw, 20px);
+    --title-size: min(20vw, 150px);
+    --header-size: min(2vw, 20px);
     --title-color: #222222;
-    --heading-color:#222222;
-    --text-color:#222222;
+    --heading-color: #222222;
+    --text-color: #222222;
     --background-color: #white;
-    --dot-init-y:calc(var(--title-size)*0.16);
-    --dot-init-x:calc(var(--title-size)*-0.05);
+    --dot-init-y: calc(var(--title-size)*0.16);
+    --dot-init-x: calc(var(--title-size)*-0.05);
 }
 
 body {
@@ -26,106 +26,106 @@ body {
 }
 
 .title {
-   clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 30%, 85% 30%, 85% 0%);
-    padding-top:calc(var(--title-size)*0.15);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 30%, 85% 30%, 85% 0%);
+    padding-top: calc(var(--title-size)*0.15);
     font-family: 'Houschka Pro';
     font-weight: 900;
     font-style: normal;
-    font-size:var(--title-size);
-    position:relative;
-    margin:auto;
-    width:fit-content;
-    height:fit-content;
-    color:var(--title-color);
+    font-size: var(--title-size);
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    color: var(--title-color);
 }
 
 .dotContainer {
-    width:calc(var(--title-size)*1.876);
-    height:calc(var(--title-size)*1.15);
-    position:relative;
-    margin:auto;
-    top:0;
-    left:0;
-    right:0;
+    width: calc(var(--title-size)*1.876);
+    height: calc(var(--title-size)*1.15);
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
     justify-content: flex-end;
     display: flex;
 }
 
 .titleDot {
-    z-index:999999;
-    background:var(--title-color);
-    width:calc(var(--title-size)*0.185);
-    height:calc(var(--title-size)*0.185);
-    transform:translateX(var(--dot-init-x)) translateY(var(--dot-init-y));
-    border-radius:50%;
-    position:absolute;
-    right:0;
-    top:0;
+    z-index: 999999;
+    background: var(--title-color);
+    width: calc(var(--title-size)*0.185);
+    height: calc(var(--title-size)*0.185);
+    transform: translateX(var(--dot-init-x)) translateY(var(--dot-init-y));
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
     animation: dotIn 2s ease-in-out, dotPulse 20s ease-in-out 3s infinite;
 }
 
-.contentDot { 
-    opacity:0;
+.contentDot {
+    opacity: 0;
     margin: auto;
     left: 0;
-    border-radius:50%;
+    border-radius: 50%;
     transform-origin: top;
-    margin-top:calc(var(--header-size) * -0.25);
-    position:absolute;
-    right:0;
+    margin-top: calc(var(--header-size) * -0.25);
+    position: absolute;
+    right: 0;
     top: calc(var(--header-size) * 4);
-    background:var(--title-color);
-    width:calc(var(--header-size));
-    height:calc(var(--header-size));
+    background: var(--title-color);
+    width: calc(var(--header-size));
+    height: calc(var(--header-size));
 
 }
 
 #storage .contentDot {
     animation: storageFall 3.5s ease-in-out infinite;
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
 }
+
 #transfer .contentDot {
     animation: transferFall 3.5s ease-in-out 0.875s infinite;
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
 }
+
 #processing .contentDot {
     animation: processingFall 3.5s ease-in-out 1.75s infinite;
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
 }
 
 
 .titleContainer {
-    position:absolute;
-    height:20%;
-    margin:auto;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    position: absolute;
+    height: 20%;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .contentContainer {
-    width:100%;
-    height:60%;
-    margin:auto;
-    inset:0;
-    top:100px;
-    position:absolute;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    width: 100%;
+    height: 60%;
+    margin: auto;
+    inset: 0;
+    top: 100px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .threeParter {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:250px;
-    width:100%;
-    max-width:1000px;
-    margin-top:10px;
-    margin-bottom:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .oneParter {
@@ -138,118 +138,120 @@ body {
 }
 
 .headerContent {
-    position:relative;
-    height:250px;
-    margin-left:10px;
-    margin-right:10px;
-    aspect-ratio:1/1;
+    position: relative;
+    height: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+    aspect-ratio: 1/1;
     border-radius: 10px;
- 
+
 }
 
 .soloContent {
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .headerTitle {
-    margin-top:5%;
-    padding-top:var(--header-size);
+    margin-top: 5%;
+    padding-top: var(--header-size);
     font-family: 'Houschka Pro';
     font-weight: 600;
     font-style: normal;
-    font-size:var(--header-size);
-    color:var(--heading-color);
-    width:100%;
-    height:fit-content; 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    font-size: var(--header-size);
+    color: var(--heading-color);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottomText {
-    font-family:sans-serif;
-    font-size:12px;
-    position:absolute;
-    bottom:0; 
-    margin-bottom:10px;
-    margin-left:10px;
+    font-family: sans-serif;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
-.leftBottomText {
+.leftBottomText {}
 
-}
-
-.rightBottomText {
-
-}
+.rightBottomText {}
 
 .soloContent .headerTitle {
-    padding-bottom:20px;
+    padding-bottom: 20px;
 }
 
 .textContent {
-    font-family:sans-serif;
-    margin-top:3px;
-    margin-bottom:3px;
-    font-size:15px;
-    color:var(--text-color);
+    font-family: sans-serif;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: var(--text-color);
 }
 
 .mainPage {
-    width:100vw;
-    height:100vh;
-    max-width:100vw;
-    max-height:100vh;
-    overflow:hidden;
-    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 @keyframes dotIn {
     0% {
-        transform:translateX(-1000px) scaleX(100) scaleY(100);
+        transform: translateX(-1000px) scaleX(100) scaleY(100);
     }
+
     100% {
-        transform:translateX(var(--dot-init-x)) translateY(var(--dot-init-y)) scaleX(1) scaleY(1); 
+        transform: translateX(var(--dot-init-x)) translateY(var(--dot-init-y)) scaleX(1) scaleY(1);
     }
 }
 
 @keyframes dotPulse {
     0% {
-       transform: translateX(var(--dot-init-x)) translateY(var(--dot-init-y)) scaleX(1) scaleY(1);
+        transform: translateX(var(--dot-init-x)) translateY(var(--dot-init-y)) scaleX(1) scaleY(1);
     }
+
     5% {
-       transform: translateX(var(--dot-init-x)) translateY(calc(var(--dot-init-y) + calc(var(--title-size) / 2))) scaleX(0.5) scaleY(0.5);
+        transform: translateX(var(--dot-init-x)) translateY(calc(var(--dot-init-y) + calc(var(--title-size) / 2))) scaleX(0.5) scaleY(0.5);
     }
+
     10% {
         transform: translateX(var(--dot-init-x)) translateY(var(--dot-init-y)) scaleX(1) scaleY(1);
-     }
-    100% {
-       transform: translateX(var(--dot-init-x)) translateY(var(--dot-init-y)) scaleX(1) scaleY(1);
     }
-} 
+
+    100% {
+        transform: translateX(var(--dot-init-x)) translateY(var(--dot-init-y)) scaleX(1) scaleY(1);
+    }
+}
 
 
 @keyframes storageFall {
     0% {
-        opacity:1;
-        transform:scale(0);
+        opacity: 1;
+        transform: scale(0);
         margin-top: calc(var(--header-size) * -0.25);
         margin-right: calc(125px - (var(--header-size) / 2));
 
     }
 
     10% {
-        opacity:1;
-        transform:scale(1);
+        opacity: 1;
+        transform: scale(1);
         margin-top: calc(var(--header-size) * -0.25);
         margin-right: calc(125px - (var(--header-size) / 2));
     }
 
     90% {
-        opacity:1;
+        opacity: 1;
         margin-top: calc(250px - (var(--header-size) * 3));
         margin-right: calc(0px - (var(--header-size) / 2));
     }
@@ -257,53 +259,52 @@ body {
     100% {
         margin-top: calc(250px - (var(--header-size) * 3));
         margin-right: calc(0px - (var(--header-size) / 2));
-        transform:scale(0);
+        transform: scale(0);
     }
 }
 
 @keyframes transferFall {
     0% {
-        opacity:1;
-        transform:scale(0);
+        opacity: 1;
+        transform: scale(0);
         margin-top: calc(var(--header-size) * -0.25);
 
     }
 
     10% {
-        opacity:1;
-        transform:scale(1);
+        opacity: 1;
+        transform: scale(1);
         margin-top: calc(var(--header-size) * -0.25);
     }
 
     90% {
-        opacity:1;
+        opacity: 1;
         margin-top: calc(250px - (var(--header-size) * 3));
     }
 
     100% {
         margin-top: calc(250px - (var(--header-size) * 3));
-        transform:scale(0);
+        transform: scale(0);
     }
 }
 
 @keyframes processingFall {
     0% {
-        opacity:1;
-        transform:scale(0);
+        opacity: 1;
+        transform: scale(0);
         margin-top: calc(var(--header-size) * -0.25);
         margin-left: calc(125px - (var(--header-size) / 2));
-
     }
 
     10% {
-        opacity:1;
-        transform:scale(1);
+        opacity: 1;
+        transform: scale(1);
         margin-top: calc(var(--header-size) * -0.25);
         margin-left: calc(125px - (var(--header-size) / 2));
     }
 
     90% {
-        opacity:1;
+        opacity: 1;
         margin-top: calc(250px - (var(--header-size) * 3));
         margin-left: calc(0px - (var(--header-size) / 2));
     }
@@ -311,6 +312,6 @@ body {
     100% {
         margin-top: calc(250px - (var(--header-size) * 3));
         margin-left: calc(0px - (var(--header-size) / 2));
-        transform:scale(0);
+        transform: scale(0);
     }
 }

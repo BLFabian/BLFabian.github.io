@@ -8,3 +8,5 @@ function createDot(containerName) {
 }
 
 createDot('processing');
+createDot('storage');
+createDot('transfer');
