@@ -45,6 +45,7 @@ body {
 }
 
 .titleDot {
+    z-index:999999;
     background:var(--title-color);
     width:calc(var(--title-size)*0.185);
     height:calc(var(--title-size)*0.185);
