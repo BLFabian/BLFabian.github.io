@@ -1,4 +1,6 @@
 
+var currentTab = 'mission';
+
 
 function createDot(containerName) {
     var targetContainer = document.getElementById(containerName);
@@ -9,6 +11,43 @@ function createDot(containerName) {
 
 function electricityCarbon() {
     var targetTitle = document.getElementById('electricity').querySelector('.headerTitle');
+}
+
+document.getElementById('missionTab').addEventListener("click", function () {
+    activeTab('mission');
+});
+document.getElementById('solutionTab').addEventListener("click", function () {
+    activeTab('solution');
+});
+document.getElementById('aboutTab').addEventListener("click", function () {
+    activeTab('about');
+});
+document.getElementById('contactTab').addEventListener("click", function () {
+    activeTab('contact');
+});
+
+function activeTab(tabName) {
+    console.log(currentTab);
+    var oldTab = document.getElementById(currentTab + 'Tab');
+    var newTab = document.getElementById(tabName + 'Tab');
+    var tabTab = document.getElementById("tabTab");
+    var contentContent = document.getElementById('contentContainer');
+
+    var oldContent = document.getElementById(currentTab + 'Content');
+    var newContent = document.getElementById(tabName + 'Content');
+
+    oldTab.classList.toggle('currentTab');
+    newTab.classList.toggle('currentTab');
+
+    oldContent.classList.toggle('currentContent');
+    newContent.classList.toggle('currentContent');
+
+    contentContent.classList.toggle(currentTab + 'Contented');
+    contentContent.classList.toggle(tabName + 'Contented');
+
+    tabTab.classList.toggle(currentTab + 'Tabbed');
+    tabTab.classList.toggle(tabName + 'Tabbed');
+    currentTab = tabName ;
 }
 
 createDot('processing');

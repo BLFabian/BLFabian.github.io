@@ -1,0 +1,126 @@
+@keyframes fauxIn {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    40% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    45% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    55% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    60% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+    100% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+}
+
+
+@keyframes dotIn {
+    0% {
+        transform: scale(50) translateX(0) translateY(0%);
+    }
+
+    100% {
+        transform: scale(1) translateX(0%) translateY(0%);
+    }
+}
+
+@keyframes dotPulse {
+    0% {
+        transform:translateY(0) scale(1);
+    }
+    5% {
+        transform: translateY(calc(var(--title-size)/3)) scale(0.65);
+    }
+    10% {
+        transform:translateY(0) scale(1);
+    }
+    100% {
+        transform:translateY(0) scale(1);
+    }
+}
+
+
+
+
+@keyframes storageFall {
+    0% {
+        opacity: 1;
+        transform: scale(0) translateX(-50%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1) translateX(-50%);
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale(1) translateX(-50%);
+        left:90%;
+        top:90%;
+    }
+
+    100% {
+        transform: scale(0) translateX(-50%);
+        left:100%;
+        top:100%;
+    }
+}
+
+@keyframes transferFall {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    10% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale(1);
+        top:90%;
+    }
+
+    100% {
+        transform: scale(0);
+        top:100%;
+    }
+}
+
+@keyframes processingFall {
+    0% {
+        opacity: 1;
+        transform: scale(0) translateX(50%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1) translateX(50%);
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale(1) translateX(50%);
+        right:90%;
+        top:90%;
+    }
+
+    100% {
+        transform: scale(0) translateX(50%);
+        right:100%;
+        top:100%;
+    }
+}
+

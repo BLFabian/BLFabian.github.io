@@ -1,73 +1,152 @@
 <html>
-            <!--
+    <!--
  Last publish 08.09 16:35
 -->
+
     <head>
         <link rel="stylesheet" type="text/css" href="mainStyle.css">
+        <link rel="stylesheet" type="text/css" href="animationStyle.css">
+        <link rel="stylesheet" type="text/css" href="mediaStyle.css">
+        <link rel="stylesheet" type="text/css" href="waveStyle.css">
         <link rel="stylesheet" type="text/css" href="font/fontSheet.css">
     </head>
 
     <body>
         <div class="mainPage">
-            <div class="titleContainer">
-                <div class="title LogoType mainTitle">
-                 
+            <div class="contentSelector">
+                <div class="selectorBox currentTab" id="missionTab">
+                    Mission
+                </div>
+                <div class="selectorBox" id="solutionTab">
+                    Solution
+                </div>
+                <div class="selectorBox" id="aboutTab">
+                    About
+                </div>
+                <div class="selectorBox" id="contactTab">
+                    Contact
+                </div>
+                <div class="fauxContentSelector">
+                <div class="selectorTab missionTabbed" id="tabTab">
+                    <div class="selectorMark"></div>
                 </div>
             </div>
-            <div class="titleContainer">
-                <div class="title LogoType inverseTitle">
-                    <div class="titleDot">
+            </div>
+            <div class="trueTitleContainer ">
+                <div class="titleContainer">
+                    <div class="title LogoType mainTitle">
+
+                    </div>
+                </div>
+                <div class="titleContainer ">
+                    <div class="title LogoType inverseTitle">
+                        <div class="titleDot">
+                        </div>
                     </div>
                 </div>
             </div>
 
-        <div class="contentContainer">
-            <div class="threeParter">
-                <div class="headerContent" id="storage">
-                    <div class="headerTitle">
-                        STORAGE
+            <div class="contentContainer missionContented" id="contentContainer">
+                <div class="contentContent currentContent" id="missionContent">
+                    <div class="threeParter">
+                        <div class="headerContent" id="storage">
+                            <div class="headerTitle">
+                                STORAGE
+                            </div>
+                        </div>
+                        <div class="headerContent" id="transfer">
+                            <div class="headerTitle">
+                                TRANSFER
+                            </div>
+                        </div>
+                        <div class="headerContent" id="processing">
+                            <div class="headerTitle">
+                                PROCESSING
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="headerContent" id="transfer">
-                    <div class="headerTitle">
-                        TRANSFER
-                    </div>
-                </div>
-                <div class="headerContent" id="processing">
-                    <div class="headerTitle">
-                        PROCESSING
-                    </div>
-                </div>
-            </div>
 
-            <div class="threeParter">
+                    <div class="threeParter">
 
 
-                <div class="headerContent" id="electricity">
-                    <div class="headerTitle">
-                        ELECTRICITY
-                    </div>
-                    <div class="headerTitle fauxTitle">
-                        CARBON
-                    </div>
-                    </div>
+                        <div class="headerContent" id="electricity">
+                            <div class="headerTitle">
+                                ELECTRICITY
+                            </div>
+                            <div class="headerTitle fauxTitle">
+                                CARBON
+                            </div>
+                        </div>
                     </div>
 
                     <div class="textBlock">
-                    <div class="textContent">
-                        Online advertising consumes <b>1%</b> of global energy.
-                    </div>
-                    <div class="textContent">
-                        This equates to <b>17.000.000.000</b> litres of oil yearly.
-                    </div>
-                    <div class="textContent hittingContent">
-                        <span class="logoType">Hiili</span> is the carbon measurement solution for <b>everything
-                            digital</b>.
+                        <div class="textContent">
+                            Online advertising consumes <b>1%</b> of global energy.
+                        </div>
+                        <div class="textContent">
+                            This equates to <b>17.000.000.000</b> litres of oil yearly.
+                        </div>
+                        <div class="textContent hittingContent">
+                            <span class="logoType">Hiili</span> is the carbon measurement solution for <b>everything
+                                digital</b>.
+                        </div>
                     </div>
                 </div>
-                </div>
+                <div class="contentContent" id="solutionContent">
 
+                    <div class="paragraphTitle">
+                        A SINGLE SOURCE OF TRUTH
+                    </div>
+                    <div class="paragraphText">
+                        The Hiili platform seamlessly integrates carbon measurements across all digital services.
+                    </div>
+                    <div class="paragraphText">
+                        Through our carbon dashboard you can track, measure and export the impact of all activities.
+                    </div>
+                </div>
+                <div class="contentContent" id="aboutContent">
+                    <div class="paragraphTitle">
+                        IT STARTED IN THE LAB
+                    </div>
+                    <div class="paragraphText">
+                        Hiili is a joint venture between Universidad Carlos III de Madrid and veterans from media and advertising technology.
+                    </div>
+                    <div class="paragraphText">
+                        We are committed to a fully scientific and transparent approach to data and insights.
+                    </div>
+                </div>
+                <div class="contentContent" id="contactContent">
+                    <div class="paragraphTitle">
+                        LET'S TALK
+                    </div>
+
+                    <div class="paragraphText">
+                        hello@hiili.io
+                    </div>
+                </div>
             </div>
+            <div class="ocean">
+            
+                <div class="wave" id="wave4">
+    
+                </div>
+                <div class="wave" id="wave3">
+    
+                </div>
+                
+                <div class="tugboat">
+    
+                </div>
+    
+                <div class="wave" id="wave2">
+    
+                </div>
+                <div class="wave" id="wave1">
+    
+                </div>
+            </div>
+        </div>
+        </div>
         </div>
 
 
