@@ -8,7 +8,7 @@
     }
 
     .bottomText {
-        bottom:30px;
+        margin-bottom:max(30px, 10%);
     }
 
     .boxedIn {
