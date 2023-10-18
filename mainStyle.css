@@ -38,7 +38,8 @@ body {
 }
 
 .contentSelector {
-    height:10%;
+    margin-top:1%;
+    height:6%;
     max-height:150px;
     width:100%;
     position:relative;
@@ -48,7 +49,7 @@ body {
 }
 
 .selectorBox {
-    height:60%;
+    height:100%;
     width: 10%;
     max-width: 12vh;
     position:relative;
@@ -97,16 +98,26 @@ position:absolute;
 .selectorTab {
     pointer-events:none;
     position:absolute;
-    height: 70%;
+    height: 100%;
     width:25%; 
     opacity:1;
     mix-blend-mode: color-dodge;
     transition: left 150ms ease-in-out, border-radius 250ms ease-in-out;
     display:flex;
     justify-content:center;
-    align-items:flex-end;
+    align-items:center;
     overflow:visible;
+    background:transparent;
+}
+
+.selectorTab::after {
+    display:block;
+    content:"";
     background:#3272b5;
+    border-radius:9999px;
+    height:70%;
+    width:90%;
+    position:relative;
 }
 
 .selectorMark {
@@ -134,7 +145,7 @@ right:300vw;
 }
 
 .missionTabbed {
-    left:0%;
+    left:0%;    
 }
 
 .solutionTabbed {
