@@ -188,8 +188,8 @@ left:-300vw;
     height: 25%;
     aspect-ratio: 1/1;
     margin-bottom: 15.64%;
-    left: 89.2%;
-    position: relative;
+    right: 0;
+    position: absolute;
     animation: dotIn 2s ease-in-out, dotPulse 20s ease-in-out 3s infinite;
 }
 
@@ -263,26 +263,6 @@ left:-300vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow:scroll;
-}
-
-.privacyContent {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height:80%;
-    overflow:scroll;
-}
-
-.privacyContent .boxedIn {
-    height:fit-content;
-}
-
-.privacyContent .paragraphText {
-    width: 100%;
-    margin-bottom:var(--paragraph-title);
-    text-align:left;
 }
 
 #aboutContent .paragraphTitle, #aboutContent .paragraphText {
