@@ -36,6 +36,7 @@ z-index:500;
 
 #privacyPage .paragraphTitle {
     text-align: center;
+    width: 100%;
 }
 
 #privacyPage  .contentLine {
