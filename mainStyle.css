@@ -471,14 +471,14 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .copyRight {
-    text-align:right;
+    text-align:left;
 left:0;
 margin-left:10px;   
 }
 
 
 .privacyLink {
-    text-align:left;
+    text-align:right;
 right:0;
 margin-right:10px;
 }
