@@ -19,8 +19,13 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height:75%;
-    overflow:scroll;
+    height:70%;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+
+#privacyPage .footerText {
+z-index:500;
 }
 
 #privacyPage .paragraphText {
