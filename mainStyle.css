@@ -101,13 +101,12 @@ position:absolute;
     width:25%; 
     opacity:1;
     mix-blend-mode: color-dodge;
-    transition:left 150ms ease-in-out;
+    transition: left 150ms ease-in-out, border-radius 250ms ease-in-out;
     display:flex;
     justify-content:center;
     align-items:flex-end;
     overflow:visible;
     background:#3272b5;
-    box-shadow: 0px 3vh 1vh -1vh rgb(0,0,0,0.5)
 }
 
 .selectorMark {
@@ -336,7 +335,7 @@ right:300vw;
     bottom: 0;
     margin-bottom: 10px;
     margin-left: 10px;
-    color:white;
+    color:black;
 }
 
 
