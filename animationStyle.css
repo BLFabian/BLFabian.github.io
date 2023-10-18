@@ -69,13 +69,13 @@
     90% {
         opacity: 1;
         transform: scale(1) translateX(-50%);
-        left:90%;
+        left:110%;
         top:90%;
     }
 
     100% {
         transform: scale(0) translateX(-50%);
-        left:100%;
+        left:125%;
         top:100%;
     }
 }
@@ -94,7 +94,7 @@
     90% {
         opacity: 1;
         transform: scale(1);
-        top:90%;
+        top:80%;
     }
 
     100% {
@@ -117,13 +117,13 @@
     90% {
         opacity: 1;
         transform: scale(1) translateX(50%);
-        right:90%;
+        right:110%;
         top:90%;
     }
 
     100% {
         transform: scale(0) translateX(50%);
-        right:100%;
+        right:125%;
         top:100%;
     }
 }
