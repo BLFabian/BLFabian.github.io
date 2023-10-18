@@ -1,19 +1,20 @@
-.mainTitle {
+#privacyPage .mainTitle {
     clip-path:none;
 }
 
-.inverseTitle {
+#privacyPage .inverseTitle {
     display:none;
 }
 
-.boxedIn {
+#privacyPage  .boxedIn {
     overflow-y: scroll;
     overflow-x: hidden;
     padding-top:20px;
     padding-bottom:20px;
+    height:fit-content;
 }
 
-.privacyContent {
+#privacyPage .privacyContent {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -22,16 +23,24 @@
     overflow:scroll;
 }
 
-.boxedIn {
-    height:fit-content;
-}
-.paragraphText {
+#privacyPage .paragraphText {
     width: 100%;
     margin-bottom:var(--paragraph-title);
     text-align:left;
 }
 
-.contentLine {
+#privacyPage .paragraphTitle {
+    text-align: center;
+}
+
+#privacyPage  .contentLine {
     margin:auto;
     left:0; right:0;
+}
+
+@media (orientation: portrait) and (max-width:70vh) {
+    :root {
+        --paragraph-title: min(2.3vw, 14px);
+        --paragraph-text: min(1.5vw, 14px);
+    }
 }
