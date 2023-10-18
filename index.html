@@ -14,11 +14,11 @@
     <body>
         <div class="mainPage">
             <div class="contentSelector">
-                <div class="selectorBox currentTab" id="missionTab">
-                    Mission
-                </div>
-                <div class="selectorBox" id="solutionTab">
+                <div class="selectorBox currentTab" id="solutionTab">
                     Solution
+                </div>
+                <div class="selectorBox" id="researchTab">
+                    Research
                 </div>
                 <div class="selectorBox" id="aboutTab">
                     About
@@ -27,7 +27,7 @@
                     Contact
                 </div>
                 <div class="fauxContentSelector">
-                    <div class="selectorTab missionTabbed" id="tabTab">
+                    <div class="selectorTab solutionTabbed" id="tabTab">
                     </div>
                 </div>
             </div>
@@ -45,77 +45,96 @@
                 </div>
             </div>
 
-            <div class="contentContainer missionContented" id="contentContainer">
-                <div class="contentContent currentContent" id="missionContent">
-                    <div class="threeParter">
-                        <div class="headerContent" id="storage">
-                            <div class="headerTitle">
-                                STORAGE
-                            </div>
-                        </div>
-                        <div class="headerContent" id="transfer">
-                            <div class="headerTitle">
-                                TRANSFER
-                            </div>
-                        </div>
-                        <div class="headerContent" id="processing">
-                            <div class="headerTitle">
-                                PROCESSING
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="threeParter">
-
-
-                        <div class="headerContent" id="electricity">
-                            <div class="headerTitle">
-                                ELECTRICITY
-                            </div>
-                            <div class="headerTitle fauxTitle">
-                                CARBON
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="textBlock">
-                        <div class="textContent">
-                            Online advertising consumes <b>1%</b> of global energy.
-                        </div>
-                        <div class="textContent">
-                            This equates to <b>17.000.000.000</b> litres of oil yearly.
-                        </div>
-                        <div class="textContent hittingContent">
-                            <span class="logoType">Hiili</span> is the carbon measurement solution for <b>everything
-                                digital</b>.
-                        </div>
-                    </div>
-                </div>
-                <div class="contentContent" id="solutionContent">
-
+            <div class="contentContainer solutionContented" id="contentContainer">
+                <div class="contentContent currentContent" id="solutionContent">
+                    <div class="boxedIn">
                     <div class="paragraphTitle">
                         A SINGLE SOURCE OF TRUTH
                     </div>
-                    <div class="paragraphText">
-                        The Hiili platform seamlessly integrates carbon measurements across all digital services.
+                    <div class="animationContent">
+                        <div class="contentLine topLine"></div>
+                        <div class="animationContainer">
+                            <div class="animationBox" id="storage">
+                                <div class="animationTitle">
+                                    STORAGE
+                                </div>
+                            </div>
+                            <div class="animationBox" id="transfer">
+                                <div class="animationTitle">
+                                    TRANSFER
+                                </div>
+                            </div>
+                            <div class="animationBox" id="processing">
+                                <div class="animationTitle">
+                                    PROCESSING
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animationContainer">
+                            <div class="animationReceiver" id="electricity">
+                                <div class="animationTitle">
+                                    ELECTRICITY
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentLine bottomLine"></div>
                     </div>
-                    <div class="paragraphText">
-                        Through our carbon dashboard you can track, measure and export the impact of all activities.
+                    <div class="textBlock">
+                        <div class="paragraphText">
+                            The Hiili platform seamlessly integrates carbon measurements across all digital services.
+                        </div>
+                        <div class="paragraphText">
+                            Through our carbon dashboard you can track, measure and export the impact of all activities.
+                        </div>
                     </div>
                 </div>
+            </div>
+                <div class="contentContent" id="researchContent">
+                    <div class="boxedIn">
+                   
+                    <div class="twoParter" id="researchParter">
+                       
+                        <div class="textBlock">
+                            <div class="paragraphTitle">
+                                IT STARTED IN THE LAB
+                            </div>
+                            
+                            <div class="paragraphText">
+                                Hiili is a joint venture between Universidad Carlos III de Madrid and veterans from the
+                                media and
+                                advertising industries.
+                            </div>
+                            <a class="paragraphText" href="paper.pdf" download>
+                                Read the publication that started it all here.
+                            </a>
+                            <div class="paragraphText">
+                                We are committed to a fully scientific and transparent approach to data and insights.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <div class="contentContent" id="aboutContent">
+                    <div class="boxedIn">
                     <div class="paragraphTitle">
-                        IT STARTED IN THE LAB
+                        WE PROVIDE THE NUMBERS
                     </div>
                     <div class="paragraphText">
-                        Hiili is a joint venture between Universidad Carlos III de Madrid and veterans from media and
-                        advertising.
+                        Hiili is an independent data-based institution.
                     </div>
                     <div class="paragraphText">
-                        We are committed to a fully scientific and transparent approach to data and insights.
+                        We are not looking to provide advisory services, nor will we push you to reduce your carbon emissions.
+                    </div>
+                    <div class="paragraphText">
+                        There are countless problems and decisions to tackle to reduce global carbon emissions.
+                    </div>
+                    <div class="paragraphText">
+                       We firmly believe the first step is <b>numbers</b>, and that's all we will ever provide.
                     </div>
                 </div>
+            </div>
                 <div class="contentContent" id="contactContent">
+                    <div class="boxedIn">
                     <div class="paragraphTitle">
                         LET'S TALK
                     </div>
@@ -125,13 +144,31 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
         </div>
         </div>
         </div>
-        <div class="bottomText">
-            Copyright © 2023 Hiili
+        <div class="bottomBlock">
+            <div class="bottomText">
+                <div class="textContent">
+                    Online advertising consumes <b>1%</b> of global energy.
+                </div>
+                <div class="textContent">
+                    This equates to <b>17.000.000.000</b> litres of oil yearly.
+                </div>
+                <div class="textContent hittingContent">
+                    <span class="logoType">Hiili</span> is the carbon measurement solution for <b>everything
+                        digital</b>.
+                </div>
+            </div>
+            <div class="copyRight">
+                Copyright © 2023 Hiili
+            </div>
         </div>
+        <a class="copyRight privacyLink" href="privacy.html">
+            Privacy Policy
+        </a>
         </div>
     </body>
     <script type="text/javascript" src="dotScript.js"></script>

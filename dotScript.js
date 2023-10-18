@@ -1,5 +1,5 @@
 
-var currentTab = 'mission';
+var currentTab = 'solution';
 
 
 function createDot(containerName) {
@@ -13,11 +13,11 @@ function electricityCarbon() {
     var targetTitle = document.getElementById('electricity').querySelector('.headerTitle');
 }
 
-document.getElementById('missionTab').addEventListener("click", function () {
-    activeTab('mission');
-});
 document.getElementById('solutionTab').addEventListener("click", function () {
     activeTab('solution');
+});
+document.getElementById('researchTab').addEventListener("click", function () {
+    activeTab('research');
 });
 document.getElementById('aboutTab').addEventListener("click", function () {
     activeTab('about');
@@ -27,7 +27,6 @@ document.getElementById('contactTab').addEventListener("click", function () {
 });
 
 function activeTab(tabName) {
-    console.log(currentTab);
     var oldTab = document.getElementById(currentTab + 'Tab');
     var newTab = document.getElementById(tabName + 'Tab');
     var tabTab = document.getElementById("tabTab");

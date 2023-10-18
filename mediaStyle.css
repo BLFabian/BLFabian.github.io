@@ -1,21 +1,28 @@
-@media (orientation: portrait) {
-
+@media (orientation: portrait) and (max-width:70vh) {
     :root {
         --header-size: min(3.5vw, 35px);
-        --text-content: min(3vw, 34px);
-        --paragraph-title: min(5vw, 70px);
-        --paragraph-text: min(4vw, 35px);
+        --text-content: min(3vw, 26px);
+        --paragraph-title: min(4vw, 36px);
+        --paragraph-text: min(3.6vw, 30px);
         --selector-size: min(3vw, 26px);
+    }
+
+    .bottomText {
+        bottom:30px;
+    }
+
+    .boxedIn {
+        width:85%;
+    }
+
+    .twoParter .textBlock {
+        margin-left: 50px;
+
     }
 
     .paragraphText {
         margin-top: 15px;
         margin-bottom: 15px;
-    }
-
-
-    .bottomText {
-        font-size: min(18px, 10vw);
     }
 
     .contentSelector {
@@ -37,11 +44,11 @@
     .selectorTab {
     }
 
-    .missionTabbed {
+    .solutionTabbed {
         left: 0%;
     }
 
-    .solutionTabbed {
+    .researchTabbed {
         left: 25%;
     }
 
@@ -53,8 +60,9 @@
         left: 75%;
     }
 
-.binaryRain {
-    font-size:24px;
+
+.copyRight {
+    font-size:20px;
 }
 
 }
