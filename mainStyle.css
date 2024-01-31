@@ -212,7 +212,7 @@ body {
 }
 
 .splashBox {
-    z-index:20;
+    z-index:2;
     margin-top: calc(var(--box-margin)/2);
     margin-bottom: calc(var(--box-margin)/2);
     transition: transform 350ms ease-in-out;
