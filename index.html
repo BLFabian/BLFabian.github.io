@@ -6,171 +6,268 @@
     <head>
         <link rel="stylesheet" type="text/css" href="mainStyle.css">
         <link rel="stylesheet" type="text/css" href="animationStyle.css">
-        <link rel="stylesheet" type="text/css" href="waveStyle.css">
         <link rel="stylesheet" type="text/css" href="font/fontSheet.css">
         <link rel="stylesheet" type="text/css" href="mediaStyle.css">
+        <script type="text/javascript" src="supplementalScript.js"></script>
+        <meta charset="UTF-8">
     </head>
 
     <body>
-        <div class="mainPage">
-            <div class="contentSelector">
-                <div class="selectorBox currentTab" id="solutionTab">
-                    Solution
-                </div>
-                <div class="selectorBox" id="researchTab">
-                    Research
-                </div>
-                <div class="selectorBox" id="aboutTab">
-                    About
-                </div>
-                <div class="selectorBox" id="contactTab">
-                    Contact
-                </div>
-                <div class="fauxContentSelector">
-                    <div class="selectorTab solutionTabbed" id="tabTab">
+        <div class="fullPage" id="fullPage">
+            <div class="fullMenuBar">
+                <div class="menuBar">
+                    <div class="darkSpace"></div>
+                    <div class="logoWrapper">
+                        <div class="logoBox logoImage" id="logoBox" onclick="makeActive(this)" data-number='0' data-section="introContent"></div>
+                    </div>
+                    <div class="midSectionWrapper" id="midSectionWrapper">
+                        <div class="categoryWrapper">
+                            <div class="categoryTab solutionTab" data-number='1' data-section="solutionContent" id="solutionTab">
+                                <div class="smallSectionBubble noSized"></div>
+                                <div class="bigSectionBubble noSized"></div>
+                                <span>Solution</span>
+                            </div>
+                            <div class="categoryTab researchTab"  data-number='2' data-section="aboutContent" id="aboutTab">
+                                <div class="smallSectionBubble noSized"></div>
+                                <div class="bigSectionBubble noSized"></div>
+                                <span>About</span>
+                            </div>
+                            <div class="categoryTab aboutTab"  data-number='3' data-section="platformContent" id="platformTab">
+                                <div class="smallSectionBubble noSized"></div>
+                                <div class="bigSectionBubble noSized"></div>
+                                <span>Platform</span>
+                            </div>
+                            <div class="categoryTab teamTab"  data-number='4' data-section="teamContent" id="teamTab">
+                                <div class="smallSectionBubble noSized"></div>
+                                <div class="bigSectionBubble noSized"></div>
+                                <span>Team</span>
+                            </div>
+                            <div class="categoryTab contactTab"  data-number='5' data-section="contactContent" id="contactTab">
+                                <div class="smallSectionBubble noSized"></div>
+                                <div class="bigSectionBubble noSized"></div>
+                                <span>Contact</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottomSectionWrapper">
+                        <span>Copyright © 2024 Hiili</span>
+                        <span>All rights reserved.</span>
+                    </div>
+                    <div class="hamburgerMenu" id="hamburgerMenu" onclick="toggleMenu()">
+                        <div class="hamburgerLines">
+                            <div class="lineWrapper" id="lineOne">
+                            <div class="hamburgerLine"></div></div>
+                            <div class="lineWrapper" id="lineTwo">
+                            <div class="hamburgerLine"></div></div>
+                            <div class="lineWrapper" id="lineThree">
+                            <div class="hamburgerLine"></div></div>
+                        </div>
                     </div>
                 </div>
+                <div class="menuLine" id="menuLine">
+                </div>
             </div>
-            <div class="trueTitleContainer ">
-                <div class="titleContainer">
-                    <div class="title LogoType mainTitle">
+            <div class="trueBodyContent" id="trueBodyContent">
+                <div class="introContent bigContent whiteContent" id="introContent">
+                    <div class="contentContainer">
+                        <div class="textBox pendingAnimation" data-animation-class="flyInLeft">
+                            <div class="titleText">
+                                A single source of truth
+                            </div>
+                            <div class="bodyText">
+                                Hiili is the carbon data platform for carbon measurement across all digital services.
+                            </div>
+                        </div>
 
-                    </div>
-                </div>
-                <div class="titleContainer ">
-                    <div class="title LogoType inverseTitle">
-                        <div class="titleDot">
+                        <div class="splashBox">
+                            <div class="outerSplash">
+                                <div class="innerSplash pendingAnimation" data-animation-class="splashIn">
+                                    <div class="splashText">The sum of all information and communications technologies
+                                        consumes
+                                        <span class="markerText">4% of all electricity worldwide</span>, according to
+                                        the
+                                        latest
+                                        estimates.
+                                    </div>
+                                    <div class="splashText">The internet, including all our digital activities, has now
+                                        <span class="markerText">surpassed
+                                            the aviation
+                                            industry</span> in terms
+                                        of carbon emissions.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="textBox rightAlignedTextBox pendingAnimation" data-animation-class="flyInRight">
+                            <div class="titleText">
+                                Quantifying actual emissions
+                            </div>
+                            <div class="bodyText">
+                                Hiili's industry-leading approach to quantifying emissions from digital activities is
+                                the
+                                only scientifically validated method.
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="solutionContent bigContent orangeContent" id="solutionContent">
+                    <div class="contentContainer">
+                        <div class="textBox pendingAnimation" data-animation-class="flyInLeft">
+                            <div class="titleText">
+                                A simple pixel integration
+                            </div>
+                            <div class="bodyText">
+                                Implement our pixel on all your media campaigns, for effortless measurement. 
+                            </div>
+                        </div>
 
-            <div class="contentContainer solutionContented" id="contentContainer">
-                <div class="contentContent currentContent" id="solutionContent">
-                    <div class="boxedIn">
-                    <div class="paragraphTitle">
-                        A SINGLE SOURCE OF TRUTH
-                    </div>
-                    <div class="animationContent">
-                        <div class="contentLine topLine"></div>
-                        <div class="animationContainer">
-                            <div class="animationBox" id="storage">
-                                <div class="animationTitle">
-                                    STORAGE
-                                </div>
-                            </div>
-                            <div class="animationBox" id="transfer">
-                                <div class="animationTitle">
-                                    TRANSFER
-                                </div>
-                            </div>
-                            <div class="animationBox" id="processing">
-                                <div class="animationTitle">
-                                    PROCESSING
-                                </div>
-                            </div>
-                        </div>
-                        <div class="animationContainer">
-                            <div class="animationReceiver" id="electricity">
-                                <div class="animationTitle">
-                                    ELECTRICITY
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contentLine bottomLine"></div>
-                    </div>
-                    <div class="textBlock">
-                        <div class="paragraphText">
-                            The Hiili platform seamlessly integrates carbon measurements across all digital services.
-                        </div>
-                        <div class="paragraphText">
-                            Through our carbon dashboard you can track, measure and export the impact of all activities.
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <div class="contentContent" id="researchContent">
-                    <div class="boxedIn">
-                   
-                    <div class="twoParter" id="researchParter">
-                       
-                        <div class="textBlock">
-                            <div class="paragraphTitle">
-                                IT STARTED IN THE LAB
-                            </div>
-                            
-                            <div class="paragraphText">
-                                Hiili is a joint venture between Universidad Carlos III de Madrid and veterans from the
-                                media and
-                                advertising industries.
-                            </div>
-                            <a class="paragraphText" href="paper.pdf" download>
-                                Read the publication that started it all here.
-                            </a>
-                            <div class="paragraphText">
-                                We are committed to a fully scientific and transparent approach to data and insights.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <div class="contentContent" id="aboutContent">
-                    <div class="boxedIn">
-                    <div class="paragraphTitle">
-                        WE PROVIDE THE NUMBERS
-                    </div>
-                    <div class="paragraphText">
-                        Hiili is an independent data-based institution.
-                    </div>
-                    <div class="paragraphText">
-                        We are not looking to provide advisory services, nor will we push you to reduce your carbon emissions.
-                    </div>
-                    <div class="paragraphText">
-                        There are countless problems and decisions to tackle to reduce global carbon emissions.
-                    </div>
-                    <div class="paragraphText">
-                       We firmly believe the first step is <b>numbers</b>, and that's all we will ever provide.
-                    </div>
-                </div>
-            </div>
-                <div class="contentContent" id="contactContent">
-                    <div class="boxedIn">
-                    <div class="paragraphTitle">
-                        LET'S TALK
-                    </div>
+                        <div class="splashBox" id="illustrationSplash">
+                            <div class="illustrationContent">
+                                <div class="hiiliDeviceBox iconThing leftIcon pendingAnimation" data-animation-class="bounceRight"></div>
+                                <div class="outerSplash messageSplash">
+                                    <div class="innerSplash">
+                                        <div class="illustrationText">When the creative loads, it immediately sends
+                                            thousands of minimal data pieces to Hiili’s server, containing vital
+                                            information about the device, and the creative itself.</div>
 
-                    <div class="paragraphText">
-                        hello@hiili.io
+                                    </div>
+                                </div>
+                                <div class="hiiliPixelIcon iconThing rightIcon pendingAnimation" data-animation-class="bounceLeft"></div>
+                            </div>
+                        </div>
+                        <div class="textBox rightAlignedTextBox pendingAnimation" data-animation-class="flyInRight">
+                            <div class="titleText">
+                                Metrics you can count on
+                            </div>
+                            <div class="bodyText">
+                                Export or automate CO₂ and efficiency numbers per format, campaign or brand.
+                                Every campaign also receive a Hiili grade, measured against industry benchmarks.
+                            </div>
+                            <div class="gradeContainer">
+                                <div class="hiiliGrade inView" id="hiiliGrade">
+                                    <div class="gradeBox"></div>
+                                    <div class="coloredBox">
+                                    <div class="letterBox"></div>
+                                    <div class="triangleBox"></div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutContent bigContent whiteContent" id="aboutContent">
+                    <div class="contentContainer">
+                        <div class="textBox pendingAnimation" data-animation-class="flyInLeft">
+                            <div class="titleText">
+                                It started in the lab
+                            </div>
+                            <div class="bodyText">
+                                Hiili is a joint venture between Universidad Carlos III de Madrid and veterans from media and advertising industries. Read the publication that started it all <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/10154177">here</a>.
+                            </div>
+                        </div>
+
+                        <div class="newsRoller">
+                        </div>
+                        <div class="textBox rightAlignedTextBox">
+                            <div class="titleText pendingAnimation" data-animation-class="flyInRight">
+                                A company six years in the making
+                            </div>
+                            <div class="bodyText">
+                                Since 2018 Hiili's research has been featured and quoted across countless outlets and newspapers. In 2024 Hiili was officially launched as a spin-off venture, to further develop its first-generation carbon data platform.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platformContent bigContent darkContent" id="platformContent">
+                    <div class="contentContainer">
+                        <div class="textBox pendingAnimation" data-animation-class="flyInLeft">
+                            <div class="titleText">
+                                A single login
+                            </div>
+                            <div class="bodyText">
+                                Easily connect your ad server, DSP, and social media accounts to the Hiili platform for a complete overview of your digital carbon emissions.
+                            </div>
+                        </div>
+                            <div class="illustrationContent">
+                               <div class="trueIllustration"></div>
+                            </div>
+                        <div class="textBox rightAlignedTextBox pendingAnimation" data-animation-class="flyInRight">
+                            <div class="titleText">
+                                Always improving
+                            </div>
+                            <div class="bodyText">
+                                Explore updates, optimization suggestions and tips for how to increase the energy efficiency of your digital activities.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="teamContent bigContent whiteContent" id="teamContent">
+                    <div class="contentContainer">
+                        <div class="textBox pendingAnimation" data-animation-class="flyInLeft">
+                            <div class="titleText">
+                                Meet the team
+                            </div>
+                            <div class="bodyText">
+                                Hiili is founded by a team of veterans from emerging technologies, scaling and sustainability.
+                            </div>
+                        </div>
+
+                        <div class="splashBox">
+                            <div class="outerSplash faceContainer">
+                                <div class="faceAndText" id="ruben">
+                                    <div class="faceImage"></div>
+                                    <div class="titleAndContent">
+                                        <div class="faceTitle">Rubén Cuevas</div>
+                                        <div class="faceContent">Co-founder</div>
+                                    </div>
+                                </div>
+                                <div class="faceAndText" id="angel">
+                                    <div class="faceImage"></div>
+                                    <div class="titleAndContent">
+                                        <div class="faceTitle">Ángel Cuevas</div>
+                                        <div class="faceContent">Co-founder</div>
+                                    </div>
+                                </div>
+                                <div class="faceAndText" id="mikko">
+                                    <div class="faceImage"></div>
+                                    <div class="titleAndContent">
+                                        <div class="faceTitle">Mikko Kotila</div>
+                                        <div class="faceContent">Co-founder</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactContent bigContent orangeContent" id="contactContent">
+                    <div class="contentContainer">
+                        <div class="splashBox">
+                            <div class="outerSplash">
+                                <div class="innerSplash">
+                                    <div class="splashText">
+                                        Hiili S.L.
+                                    </div>
+                                    <div class="splashText">
+                                        📍 Av. Gregorio Peces Barba, 1, Leganes, Madrid, 28919, ES</span>
+                                    </div>
+                                    <div class="splashText">
+                                        <a href="mailto:hello@hiili.io" style="text-decoration:none;">✉️ hello@hiili.io</a>
+                                    </div>
+                                    <div class="splashText">
+                                        ☎️ 916245703
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="mobileBottomSectionWrapper">
+                <span>Copyright © 2024 Hiili</span>
+                <span>All rights reserved.</span>
             </div>
         </div>
-        </div>
-        </div>
-        </div>
-        <div class="bottomBlock">
-            <div class="bottomText">
-                <div class="textContent">
-                    Online advertising consumes <b>1%</b> of global energy.
-                </div>
-                <div class="textContent">
-                    This equates to <b>17.000.000.000</b> litres of oil yearly.
-                </div>
-                <div class="textContent hittingContent">
-                    <span class="logoType">Hiili</span> is the carbon measurement solution for <b>everything
-                        digital</b>.
-                </div>
-            </div>
-        </div>
-        <div class="copyRight footerText">
-            Copyright © 2023 Hiili
-        </div>
-        <a class= "privacyLink footerText" href="privacy.html">
-            Privacy Policy
-        </a>
-        </div>
+        
     </body>
-    <script type="text/javascript" src="dotScript.js"></script>
 
 </html>

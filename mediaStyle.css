@@ -1,64 +1,201 @@
-@media (orientation: portrait) and (max-width:70vh) {
-    :root {
-        --header-size: min(3.5vw, 35px);
-        --text-content: min(3vw, 26px);
-        --paragraph-title: min(4vw, 36px);
-        --paragraph-text: min(3.6vw, 30px);
-        --selector-size: min(3vw, 26px);
+@media (orientation: landscape){
+
+    .bottomSectionWrapper {
+        display:flex;
     }
 
-    .bottomText {
-        margin-bottom:max(30px, 10%);
+    .hamburgerMenu {
+        display:none;
     }
 
-    .boxedIn {
-        width:85%;
+    .mobileMenu {
+        display:none;
     }
-
-    .twoParter .textBlock {
-        margin-left: 50px;
-
-    }
-
-    .paragraphText {
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .contentSelector {
-        height: 10%;
-        max-height: 150px;
-    }
-
-    .fauxContentSelector {
-        max-width:100vh;
-        width:100%;
-    }
-
-    .selectorBox , .selectorTab {
-        height: 80%;
-        width:25%;
-        max-width: 25vh;
-    }
-
-    .solutionTabbed {
-        left: 0%;
-    }
-
-    .researchTabbed {
-        left: 25%;
-    }
-
-    .aboutTabbed {
-        left: 50%;
-    }
-
-    .contactTabbed {
-        left: 75%;
-    }
-
-
-.footerText {
-    font-size:20px;
 }
+
+@media (max-width:1240px) {
+    .titleText {
+        font-size:25px;
+    }
+
+    .bodyText {
+        font-size:20px;
+    }
+
+    .illustrationText , .splashText {
+        font-size: 18px;
+    }
+    .innerSplash {
+        padding: 20px 30px 30px 20px;
+    }
+}
+
+@media (orientation:portrait) {
+.fullMenuBar {
+    width:100%;
+    height:200px;
+    min-height: 200px;
+    flex-direction: column;
+}
+
+.fullPage {
+    flex-direction:column;
+}
+
+.menuLine {
+    width:100%;
+    height:10px;
+    z-index:40;
+}
+
+.menuBar {
+    width:100%;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.bottomSectionWrapper {
+    display:none;
+}
+
+.mobileBottomSectionWrapper {
+    display:flex;
+}
+
+.midSectionWrapper {
+    display:none;
+}
+
+.logoWrapper {
+    place-self: flex-start;
+}
+
+.categoryTab {
+    font-size: 60px;
+    margin: calc(var(--box-margin)/2);
+}
+
+.categoryWrapper {
+    align-items: center;
+}
+
+.midSectionWrapper {
+    height:650px;
+    width:100%;
+    background:var(--main-color);
+    top:200px;
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+    box-shadow: 0px 5px 0px 5px white;
+    border-radius: 0px 0px 20px 20px;
+    transition:transform 100ms ease-in-out;
+    transform:translateY(-700px);
+    z-index:20;
+}
+.logoWrapper {
+    z-index:50;
+}
+#hamburgerMenu {
+    z-index:30;
+}
+
+.darkSpace {
+    background:var(--main-color);
+    height:100%;
+    width:100%;
+    z-index:25;
+    position:absolute;
+    display:block;
+}
+
+.categoryTab:hover {
+    font-weight: 300;
+}
+
+.currentTab:hover {
+    font-weight:500;
+}
+
+.titleText {
+    font-size:50px;
+}
+
+.bodyText {
+    font-size:46px;
+}
+
+.innerSplash {
+    padding: 40px 50px 50px 40px;
+}
+
+.illustrationText, .splashText {
+    font-size: 42px;
+}
+
+.textBox, .splashBox {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 950px;
+}
+
+#illustrationSplash {
+    width:90%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.newsRoller {
+    height: 80px;
+    background-size: contain;
+    margin-top: 80px;
+    width: 300%;
+    margin-bottom: 80px;
+    animation: rollReel 20s linear infinite;
+}
+
+.hiiliGrade {
+    height:100px;
+}
+
+.gradeBox {
+    width: 100px;
+    height: 100px;
+}
+
+.letterBox , .triangleBox , .coloredBox {
+    height: 100px;
+}
+
+.triangleBox {
+    width: 100px;
+}
+.letterBox {
+    font-size:60px;
+    animation: swappingLetterWidthsMobile 9s linear infinite, swappingLetterColors 9s linear infinite;
+}
+
+.faceTitle  {
+    font-size:42px;
+}
+.faceContent {
+    font-size:36px;
+}
+
+.faceImage {
+    min-width: 150px;
+    min-height: 150px;
+}
+
+.faceContainer {
+    display:flex;
+    flex-direction:column;
+}
+
+.faceAndText {
+    margin: 40px;
+}
+
 }
