@@ -205,4 +205,15 @@
     margin: 40px;
 }
 
+.trueBodyContent {
+    height: calc(100% - 200px);
+    position: absolute;
+    bottom:0;
+}
+
+.fullMenuBar {
+    position:absolute;
+    top:0;
+}
+
 }
