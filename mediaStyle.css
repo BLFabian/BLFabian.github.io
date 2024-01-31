@@ -11,6 +11,9 @@
     .mobileMenu {
         display:none;
     }
+    .mobileBottomSectionWrapper {
+        display:none;
+    }
 }
 
 @media (max-width:1240px) {
