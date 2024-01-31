@@ -681,6 +681,11 @@ align-items:center;
     padding-bottom: 10px;
     width:100%;
     background:var(--secondary-color);
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    justify-content: center;
 }
 
 .mobileMenu {
