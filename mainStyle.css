@@ -211,11 +211,6 @@ body {
     justify-content:flex-start;
     align-items:center;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-snap-points-y: repeat(100vh);
-}
-
-.bigContent {
 }
 
 .splashBox {

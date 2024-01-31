@@ -219,5 +219,13 @@
 .faceAndText {
 width:550px;
 }
+.trueBodyContent {
+scroll-snap-type:y mandatory;
+}
+
+.bigContent {
+    scroll-snap-align: start;
+    scroll-snap-stop:normal;
+}
 
 }
