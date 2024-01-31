@@ -43,6 +43,9 @@ function generateBubble() {
 
 
 function makeActive(newActiveTab) {
+
+    event.preventDefault();
+
     hamburgerMenu.classList.remove('clickedBurger');
     document.getElementById('midSectionWrapper').classList.remove('openedMenu');
 
@@ -110,19 +113,37 @@ function myFunc(evt)
 logoBox.addEventListener('mousedown', function(){
     makeActive(logoBox);
 }, false); 
+logoBox.addEventListener('touchstart', function(){
+    makeActive(logoBox);
+}, false); 
 solutionTab.addEventListener('mousedown', function(){
     makeActive(solutionTab);
 }, false); 
+solutionTab.addEventListener('touchstart', function(){
+    makeActive(solutionTab);
+}, false);
 aboutTab.addEventListener('mousedown', function(){
+    makeActive(aboutTab);
+}, false); 
+aboutTab.addEventListener('touchstart', function(){
     makeActive(aboutTab);
 }, false); 
 platformTab.addEventListener('mousedown', function(){
     makeActive(platformTab);
 }, false); 
+platformTab.addEventListener('touchstart', function(){
+    makeActive(platformTab);
+}, false); 
 teamTab.addEventListener('mousedown', function(){
     makeActive(teamTab);
 }, false); 
+teamTab.addEventListener('touchstart', function(){
+    makeActive(teamTab);
+}, false); 
 contactTab.addEventListener('mousedown', function(){
+    makeActive(contactTab);
+}, false); 
+contactTab.addEventListener('touchstart', function(){
     makeActive(contactTab);
 }, false); 
 
