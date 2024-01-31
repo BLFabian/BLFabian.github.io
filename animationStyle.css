@@ -215,9 +215,6 @@
         transform:translateX(calc(-1 * var(--bubble-range)))
     }
     50% {
-        transform:translateX(var(--bubble-range))
-    }
-    60% {
         transform:translateX(0px);
     }
     90% {
@@ -245,9 +242,6 @@
         transform:translateX(var(--bubble-range))
     }
     50% {
-        transform:translateX(calc(-1 * var(--bubble-range)))
-    }
-    60% {
         transform:translateX(0px);
     }
     90% {
