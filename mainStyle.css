@@ -523,11 +523,17 @@ right: -23px;
     animation: swappingLetterColors 9s linear infinite;
 }
 
-.newsRoller {
-    height: 30px;
-    width: 300%;
+.newsRollerWrapper {
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
     margin-top:65px;
     margin-bottom:65px;
+}
+
+.newsRoller {
+    height: 100%;
+    width: 300%;
     background-image:url(images/logos/midreel.png);
     background-size:contain;
     background-repeat:repeat-x;

@@ -150,12 +150,16 @@
     padding-right: 5%;
 }
 
+.newsRollerWrapper {
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
 .newsRoller {
     height: 80px;
-    background-size: contain;
-    margin-top: 80px;
-    width: 300%;
-    margin-bottom: 80px;
     animation: rollReel 20s linear infinite;
 }
 
