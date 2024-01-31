@@ -672,7 +672,7 @@ align-items:center;
 }
 
 .mobileBottomSectionWrapper {
-    position: absolute;
+    position: relative;
     bottom: 0;
     font-size: 16px;
     margin-bottom: 10px;
