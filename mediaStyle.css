@@ -160,7 +160,7 @@
 
 .newsRoller {
     height: 80px;
-    animation: rollReel 20s linear infinite;
+    animation: rollReelMobile 20s linear infinite;
 }
 
 .hiiliGrade {

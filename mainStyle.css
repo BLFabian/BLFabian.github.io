@@ -548,7 +548,7 @@ right: -23px;
     background-image:url(images/logos/midreel.png);
     background-size:contain;
     background-repeat:repeat-x;
-    animation: rollReel 50s linear infinite;
+    animation: rollReel 40s linear infinite;
 }
 
 .trueIllustration {
@@ -558,6 +558,15 @@ right: -23px;
 }
 
 @keyframes rollReel {
+    0% {
+        background-position:0px 0px;
+    }
+    100% {
+        background-position:-2942px 0px;
+    }
+}
+
+@keyframes rollReelMobile {
     0% {
         background-position:0px 0px;
     }
