@@ -4,9 +4,7 @@ html {
     scroll-behavior: smooth;
 }
 
-
 :root {
-    cursor:pointer;
     padding: 0;
     margin: 0;
     --bubble-range: 10px;
@@ -17,14 +15,6 @@ html {
     --secondary-color:#ff8e15;
     --background-color:white;
     -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-
 }
 
 body {
@@ -37,7 +27,6 @@ body {
 }
 
 .fullMenuBar {
-    z-index: 20;
     display:flex;
     width:fit-content;
     height:100%;
@@ -201,18 +190,9 @@ body {
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    padding:0;
-    margin:0;
-    overflow:hidden;
 }
 
 .trueBodyContent {
-    z-index:10;
     width: 100%;
     height:100%;
     display:flex;
@@ -223,7 +203,7 @@ body {
 }
 
 .splashBox {
-    z-index:2;
+    z-index:20;
     margin-top: calc(var(--box-margin)/2);
     margin-bottom: calc(var(--box-margin)/2);
     transition: transform 350ms ease-in-out;
@@ -316,6 +296,14 @@ body {
     min-height: 100%;
     transition: transform 350ms ease-in-out;
     overflow:visible;
+}
+
+.trueBodyContent {
+    overflow-x:hidden;
+}
+
+#CookiebotWidget {
+    outline: transparent !important;
 }
 
 .contentContainer {
@@ -534,21 +522,15 @@ right: -23px;
     animation: swappingLetterColors 9s linear infinite;
 }
 
-.newsRollerWrapper {
-    height: 50px;
-    width: 100%;
-    overflow: hidden;
+.newsRoller {
+    height: 30px;
+    width: 300%;
     margin-top:65px;
     margin-bottom:65px;
-}
-
-.newsRoller {
-    height: 100%;
-    width: 2000px;
     background-image:url(images/logos/midreel.png);
     background-size:contain;
     background-repeat:repeat-x;
-    animation: rollReel 40s linear infinite;
+    animation: rollReel 50s linear infinite;
 }
 
 .trueIllustration {
@@ -562,16 +544,7 @@ right: -23px;
         background-position:0px 0px;
     }
     100% {
-        background-position:-2000px 0px;
-    }
-}
-
-@keyframes rollReelMobile {
-    0% {
-        background-position:0px 0px;
-    }
-    100% {
-        background-position:-2000px 0px;
+        background-position:-2371px 0px;
     }
 }
 
@@ -695,17 +668,7 @@ align-items:center;
     position: absolute;
     bottom: 0;
     font-size: 16px;
-    padding-bottom: 10px;
-    width:100%;
-    background:var(--secondary-color);
-    margin: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    justify-content: center;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    margin-bottom: 10px;
 }
 
 .mobileMenu {
