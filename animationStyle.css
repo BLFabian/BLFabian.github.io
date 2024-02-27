@@ -141,51 +141,53 @@
 
   @keyframes swappingLetterWidthsMobile {
     0% {
-        width: 90px;
+        width: 40px;
     } 
     28% {
-        width: 90px;
+        width: 40px;
     }   
     30% {
-        width: 100px;
+        width: 45px;
     }
     48% {
-        width: 100px;
+        width: 45px;
     } 
     50% {
-        width: 110px;
+        width: 50px;
     }
     58% {
-        width: 110px;
+        width: 50px;
     } 
     60% {
-        width: 120px;
+        width: 55px;
     }
     68% {
-        width: 120px;
+        width: 55px;
     } 
     70% {
-        width: 130px;
+        width: 60px;
     }
     78% {
-        width: 130px;
+        width: 60px;
     }
     80% {
-        width: 140px;
+        width: 65px;
     }
     88% {
-        width: 140px;
+        width: 65px;
     }
     90% {
-        width: 150px;
+        width: 70px;
     }
     98% {
-        width: 150px;
+        width: 70px;
     }
     100% {
-        width: 90px;
+        width: 40px;
     }
-  }
+}
+
+
 
 
 @keyframes upAndAway {
@@ -194,8 +196,18 @@
     }
 
     100% {
-     transform: scale(0.7) translateY(50px);
+    transform: var(--up-and-away);
     }
+}
+
+@keyframes upAndAwayMobile {
+    0% {
+        transform:translateY(-100px);
+        }
+    
+        100% {
+            transform: scale(0.40) translateY(85px);
+        }
 }
 
 @keyframes backAndForth {
@@ -298,3 +310,11 @@
     }
 }
 
+@keyframes rollReel {
+    0% {
+        background-position:0px 50%;
+    }
+    100% {
+        background-position:-2371px 50%;
+    }
+}

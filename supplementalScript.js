@@ -22,7 +22,7 @@ function generateBubble() {
     freshBubbleWrapper.style = 'animation: upAndAway ' + bubbleDuration + 's ease-in-out forwards';
     freshBubbleWrapper.id = 'freshBubble' + bubbleCount;
     const freshBubble = document.createElement('div');
-    freshBubble.style = 'width: ' + bubbleSize + 'px; height: ' + bubbleSize + 'px;';
+    freshBubble.style = 'min-width: ' + bubbleSize + 'px; min-height: ' + bubbleSize + 'px;';
     if(toTheLeft) {
         freshBubble.classList.add('bubbleContent', 'leftBubble');
         toTheLeft = false;
