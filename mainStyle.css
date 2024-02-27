@@ -20,6 +20,7 @@ html {
     --uc3m-size:80px;
     font-family: 'Lato';
     --main-color:#222222;
+    --soft-color:#575757;
     --secondary-color:#ff8e15;
     --background-color:white;
     -webkit-tap-highlight-color: transparent;
@@ -295,7 +296,7 @@ body {
 .bodyText {
     font-size:var(--body-text);
     font-weight:300;
-    color:var(--main-text);
+    color:var(--soft-color);
 }
 
 .splashText {   
@@ -559,15 +560,20 @@ right: -23px;
     height:262px;
 }
 
+
+.teamBox {
+    width:84%;
+    padding-left:8%;
+    padding-right:8%;
+}
 .faceContainer {
-    display:grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+    display:flex;
+    flex-direction:column;
 }
 
 .faceAndText {
     display:flex;
-    margin:calc(var(--box-margin)/1.8);
+    margin:calc(var(--box-margin)/1);
 }
 
 .faceImage {
@@ -580,6 +586,42 @@ right: -23px;
     box-shadow:var(--secondary-color) -2px -2px 0px 2px inset, rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+.topPart {
+    display:flex;
+}
+
+.bottomPart {
+    width: 400px;
+    margin-left: 20px;
+    color:var(--soft-color);
+}
+
+.faceAndText:nth-of-type(2n) {
+    flex-direction:row-reverse;
+  }
+
+  .faceImage {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+  .faceAndText:nth-of-type(2n) .titleAndContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .faceAndText:nth-of-type(2n) .topPart  {
+flex-direction:row-reverse;
+  }
+
+  .faceAndText:nth-of-type(2n) .bottomPart  {
+    text-align:right;
+    margin-left: 0px;
+    margin-right: 20px;
+      }
+
 #ruben .faceImage {
     background: url('images/faces/ruben.jpg') center center/contain no-repeat;
 }
@@ -589,6 +631,7 @@ right: -23px;
 #mikko .faceImage {
     background: url('images/faces/mikko.jpg') center center/contain no-repeat;
 }
+
 
 .faceTitle {
     font-weight:normal;

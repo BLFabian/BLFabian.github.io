@@ -653,16 +653,7 @@ justify-content: flex-start;
 align-items: center;
 }
 
-.faceAndText:nth-of-type(2n) {
-    flex-direction:row-reverse;
-  }
 
-  .faceAndText:nth-of-type(2n) .titleAndContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-  }
 
 .trueBodyContent {
 scroll-snap-type:y mandatory;
