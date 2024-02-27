@@ -10,9 +10,9 @@ html {
     --bubble-range: 10px;
     --box-margin: 45px;
     --category-size: 30px;
-    --title-size: 34px;
+    --title-size: 32px;
     --text-size: 30px;
-    --body-text:26px;
+    --body-text:24px;
     --splash-text:22px;
     --face-title:22px;
     --bottom-text:12px;
@@ -21,6 +21,7 @@ html {
     font-family: 'Lato';
     --main-color:#222222;
     --soft-color:#575757;
+    --softest-color:#6a6a6a;
     --secondary-color:#ff8e15;
     --background-color:white;
     -webkit-tap-highlight-color: transparent;
@@ -297,6 +298,14 @@ body {
     font-size:var(--body-text);
     font-weight:300;
     color:var(--soft-color);
+}
+
+.darkContent .bodyText {
+    color:white;
+}
+
+.orangeContent .bodyText {
+    color:var(--main-color);
 }
 
 .splashText {   
@@ -593,7 +602,7 @@ right: -23px;
 .bottomPart {
     width: 400px;
     margin-left: 20px;
-    color:var(--soft-color);
+    color:var(--softest-color);
 }
 
 .faceAndText:nth-of-type(2n) {
