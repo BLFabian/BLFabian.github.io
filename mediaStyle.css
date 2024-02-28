@@ -741,6 +741,7 @@ scroll-snap-type:y mandatory;
 .faceAndText {
     margin: 20px;
   }
+}
   
   @media (min-width: 576px) and (max-width: 767.98px) and (orientation:portrait) {
     /* Styles for regular mobiles */
