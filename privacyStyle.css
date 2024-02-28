@@ -1,52 +1,145 @@
-#privacyPage .mainTitle {
-    clip-path:none;
+.privacyMenuBar {
+    height:100px;
+    width:100%;
+    background: var(--main-color);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:fixed;
 }
 
-#privacyPage .inverseTitle {
-    display:none;
+.privacyContent::before {
+z-index:-20;
+display:block;
+background:var(--secondary-color);
+width:20%;
+height:auto;
+aspect-ratio:1/1;
+content:"";
+bottom:5px;
+left:5px;
+position:absolute;
 }
 
-#privacyPage  .boxedIn {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding-top:20px;
-    padding-bottom:20px;
-    height:fit-content;
+.privacyContent::after {
+    z-index:-10;
+    display:block;
+    background:white;
+    border-radius:100%;
+    width:40%;
+    height:auto;
+    aspect-ratio:1/1;
+    content:"";
+    bottom:5px;
+    left:5px;
+    position:absolute;
 }
 
-#privacyPage .privacyContent {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height:70%;
-    overflow-x:hidden;
+.privacyContent {
+    box-shadow: 0px -5px 0px 0px var(--secondary-color) inset, 5px 0px 0px 0px var(--secondary-color) inset;
+}
+
+#privacyContent {
+    overflow:hidden;
+    position:fixed;
+    height:calc(100% - 100px);
+    width:100%;
+    bottom:0;
+}
+
+#privacyContent .contentContainer {
+    justify-content:flex-start;
     overflow-y:scroll;
 }
 
-#privacyPage .footerText {
-z-index:500;
+.privacyUc3mLogo {
+    background-image:url(images/logos/uc3mwhite.png);
+    height:85px;
+    width:85px;
+    margin-right:20px;
 }
 
-#privacyPage .paragraphText {
-    width: 100%;
-    margin-bottom:var(--paragraph-title);
-    text-align:left;
+.privacyHiiliLogo {
+    background-image:url(images/hiiliCroppedWhite.png);
+    height:40px;
+    width:85px;
+    margin-bottom:13px;
+    margin-left:20px;
 }
 
-#privacyPage .paragraphTitle {
+.privacyHiiliLogo , .privacyUc3mLogo {
+    opacity:1;
+    position:relative;
+    left:0;
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#privacyPage .trueBodyContent {
+    height:100%;
+}
+
+.privacyTitle {
+font-weight:700;
+color:black;
+}
+
+.topTitle {
+    color:white;
     text-align: center;
-    width: 100%;
 }
 
-#privacyPage  .contentLine {
-    margin:auto;
-    left:0; right:0;
+.privacyBox {
+    padding-bottom:10px;
+    padding-top:10px;
+    width:100%;
 }
 
-@media (orientation: portrait) and (max-width:70vh) {
-    :root {
-        --paragraph-title: min(2.3vw, 14px);
-        --paragraph-text: min(1.5vw, 14px);
-    }
+.firstPrivacyBox {
+    padding-top:100px;
+}
+
+.privacyBox::after {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px -10px inset;
+    width:50%;
+    height:10px;
+    content:"";
+    position:relative;
+    place-self:center;
+    left: 0;
+    margin: auto;
+    right: 0;
+    margin-top:50px;
+    display:block;
+}
+
+.privacyBox:last-child {
+    padding-bottom:100px;
+}
+
+.privacyBox:last-child::after {
+    display:none;
+}
+
+.privacyBoxTitle {
+    color:var(--secondary-color);
+    font-size:calc(var(--title-size)*1.3);
+}
+
+.tableText {
+    font-size:14px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul {
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size: calc(var(--body-text)*0.8);
 }

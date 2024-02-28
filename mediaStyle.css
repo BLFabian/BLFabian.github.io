@@ -630,9 +630,7 @@ scroll-snap-type:y mandatory;
     margin: 40px;
 }
 
-.bottomPart {
-    display: none;
-}
+
 
 .trueBodyContent {
     height: calc(100% - 100px);
