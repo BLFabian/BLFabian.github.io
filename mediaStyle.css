@@ -723,6 +723,7 @@ scroll-snap-type:y mandatory;
         min-width: 35px;
         min-height: 35px;
         height: 35px;
+        border-radius: 10px;
     }
 
     .messageSplash::before, .messageSplash::after {
