@@ -693,6 +693,8 @@ scroll-snap-type:y mandatory;
     margin-bottom:2px;
     }
 
+
+    .bottomPart {display: none;}
   }
   
   @media (max-width: 400px) and (orientation:portrait) {
@@ -714,6 +716,21 @@ scroll-snap-type:y mandatory;
     .newsRollerWrapper {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .iconThing {
+        width: 35px;
+        min-width: 35px;
+        min-height: 35px;
+        height: 35px;
+    }
+
+    .messageSplash::before, .messageSplash::after {
+        min-width: 7px;
+        min-height: 7px;
+        border-radius: 15px;
+        margin-left: 3px;
+        margin-right: 3px;
     }
 
     .newsRoller {
