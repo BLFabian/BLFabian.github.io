@@ -737,6 +737,9 @@ scroll-snap-type:y mandatory;
         margin-top: calc(var(--box-margin)*0.5);
         margin-bottom: calc(var(--box-margin)*0.5);
     }
+
+.faceAndText {
+    margin: 20px;
   }
   
   @media (min-width: 576px) and (max-width: 767.98px) and (orientation:portrait) {
