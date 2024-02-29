@@ -210,9 +210,15 @@ function makeActive(newActiveTab, scrollState) {
                 }
             }
 
-            var targetScrollElement = newActiveTab.getAttribute('data-section');
-            document.getElementById(targetScrollElement).scrollIntoView(({ behavior: "smooth", block: "end", inline: "nearest" }));
 
+            var targetScrollElement = newActiveTab.getAttribute('data-section');
+
+            var avoidSmoothScrollingIntoView = window.matchMedia("(orientation: portrait)").matches;
+            if (avoidSmoothScrollingIntoView) {
+                document.getElementById(targetScrollElement).scrollIntoView()
+            } else {
+                document.getElementById(targetScrollElement).scrollIntoView(({ behavior: "smooth", block: "end", inline: "nearest" }));
+            }
             if ((newTabNumber != previousTabNumber)) {
                 currentActiveTab = newActiveTab.id;
             }

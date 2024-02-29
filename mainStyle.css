@@ -769,7 +769,7 @@ margin-right:10px;
 }
 
 #midSectionWrapper.openedMenu {
-transform:translateY(0px);
+transform:translateY(0px) scaleY(1);
 transition:transform 350ms ease-in-out;
 }
 
