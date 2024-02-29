@@ -282,6 +282,20 @@ scroll-snap-type:y mandatory;
     }
 }
 
+@media (orientation: landscape) and (max-height:800px) { 
+.faceAndText {
+    margin: calc(var(--box-margin)/3);
+}
+
+.textBox, .splashBox {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 950px;
+}
+
+}
+
 
 @media (orientation: landscape) and (max-height:625px) {
     /* SHORT SCREENS */
