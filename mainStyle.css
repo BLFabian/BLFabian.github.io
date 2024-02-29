@@ -223,6 +223,16 @@ body {
     overflow-y: scroll;
 }
 
+.trueBodyContent {
+    scroll-snap-type:y mandatory;
+    }
+    
+    .bigContent {
+        scroll-snap-align: start;
+        scroll-snap-stop:normal;
+    }
+    
+
 .splashBox {
     z-index:20;
     margin-top: calc(var(--box-margin)/2);
