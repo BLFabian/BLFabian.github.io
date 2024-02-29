@@ -41,6 +41,54 @@ function generateBubble() {
     bubbleCount++;
 }
 
+/*
+function makeActive(newActiveTab) {
+    try {
+    event.preventDefault();
+    } catch(error) {
+        // left blank 
+    }
+
+    // hamburgerMenu.classList.remove('clickedBurger'); 
+    document.getElementById('midSectionWrapper').classList.remove('openedMenu');
+
+    var previousActiveTab = document.getElementById(currentActiveTab);
+    var previousTabNumber = Number(previousActiveTab.getAttribute('data-number'));
+
+    var newActiveTab = document.getElementById(newActiveTab.id);
+    var newTabNumber = Number(newActiveTab.getAttribute('data-number'));
+
+    if((newTabNumber == previousTabNumber)) {
+        newActiveTab.classList.toggle('currentTab');
+        if(newTabNumber != 0) {
+        newActiveTab.querySelector('.bigSectionBubble').classList.toggle('noSized');
+        newActiveTab.querySelector('.smallSectionBubble').classList.toggle('noSized');
+
+        currentActiveTab = 'logoBox';
+        document.getElementById('introContent').scrollIntoView(({ behavior: "smooth", block: "end", inline: "nearest" }));
+    }
+    } else {
+        newActiveTab.classList.toggle('currentTab');
+        if(newTabNumber != 0) {
+        newActiveTab.querySelector('.bigSectionBubble').classList.toggle('noSized');
+        newActiveTab.querySelector('.smallSectionBubble').classList.toggle('noSized');
+        }
+        if(previousTabNumber != 0) {
+        previousActiveTab.classList.toggle('currentTab');
+        previousActiveTab.querySelector('.bigSectionBubble').classList.toggle('noSized');
+        previousActiveTab.querySelector('.smallSectionBubble').classList.toggle('noSized');
+        }
+    }
+
+    var targetScrollElement = newActiveTab.getAttribute('data-section');
+    document.getElementById(targetScrollElement).scrollIntoView(({ behavior: "smooth", block: "end", inline: "nearest" }));
+    
+    if((newTabNumber != previousTabNumber)) {
+    currentActiveTab = newActiveTab.id;
+}
+} 
+*/
+
 document.addEventListener("DOMContentLoaded", function () {
 
     generateBubbles();
@@ -58,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburgerMenu.classList.toggle('clickedBurger');
         document.getElementById('midSectionWrapper').classList.toggle('openedMenu');
     }
-
 
     logoBox.addEventListener('mousedown', function () {
         makeActive(logoBox);
@@ -100,8 +147,9 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburgerMenu.addEventListener('mousedown', handleBurgerClickOrTouch);
     hamburgerMenu.addEventListener('touchstart', handleBurgerClickOrTouch);
 
+    // Adding animations based on intersections
 
-    function handleIntersection(entries, observer) {
+    function animationIntersection(entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add(entry.target.getAttribute("data-animation-class"));
@@ -110,23 +158,74 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const options = {
+    const animationOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.01,
     };
-    const targetElements = document.querySelectorAll('.pendingAnimation');
+    const animationElements = document.querySelectorAll('.pendingAnimation');
 
-    targetElements.forEach(targetElement => {
-        const observer = new IntersectionObserver(handleIntersection, options);
+    animationElements.forEach(targetElement => {
+        const observer = new IntersectionObserver(animationIntersection, animationOptions);
         observer.observe(targetElement);
     });
 
+    // Testing new stuff
 
+
+    function makeVisuallyActive(newActiveTab) {
+
+        try {
+            event.preventDefault();
+        } catch (error) {
+            /* left blank */
+        }
+
+        /* hamburgerMenu.classList.remove('clickedBurger'); */
+        document.getElementById('midSectionWrapper').classList.remove('openedMenu');
+
+        var previousActiveTab = document.getElementById(currentActiveTab);
+        var previousTabNumber = Number(previousActiveTab.getAttribute('data-number'));
+
+        var newActiveTab = document.getElementById(newActiveTab.id);
+        var newTabNumber = Number(newActiveTab.getAttribute('data-number'));
+
+        if ((newTabNumber == previousTabNumber)) {
+            newActiveTab.classList.toggle('currentTab');
+            if (newTabNumber != 0) {
+                newActiveTab.querySelector('.bigSectionBubble').classList.toggle('noSized');
+                newActiveTab.querySelector('.smallSectionBubble').classList.toggle('noSized');
+
+                currentActiveTab = 'logoBox';
+            }
+        } else {
+            newActiveTab.classList.toggle('currentTab');
+            if (newTabNumber != 0) {
+                newActiveTab.querySelector('.bigSectionBubble').classList.toggle('noSized');
+                newActiveTab.querySelector('.smallSectionBubble').classList.toggle('noSized');
+            }
+            if (previousTabNumber != 0) {
+                previousActiveTab.classList.toggle('currentTab');
+                previousActiveTab.querySelector('.bigSectionBubble').classList.toggle('noSized');
+                previousActiveTab.querySelector('.smallSectionBubble').classList.toggle('noSized');
+            }
+        }
+
+        var targetScrollElement = newActiveTab.getAttribute('data-section');
+
+        if ((newTabNumber != previousTabNumber)) {
+            currentActiveTab = newActiveTab.id;
+        }
+    }
+
+
+
+    // Testing new stuff
     function activeIntersection(entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                makeActive(document.querySelector('[data-section="' + entry.target.id + '"]'), 'naturalScroll');
+                observer.unobserve(entry.target);
+                makeVisuallyActive(document.querySelector('[data-section="' + entry.target.id + '"]'));
 
             }
         });
@@ -137,7 +236,6 @@ document.addEventListener("DOMContentLoaded", function () {
         rootMargin: '0px',
         threshold: 0.51,
     };
-
     const activeElements = document.querySelectorAll('.bigContent');
 
     activeElements.forEach(targetElement => {
@@ -146,88 +244,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+
+
+
 });
 
 
-function makeActive(newActiveTab, scrollState) {
-
-    try {
-        event.preventDefault();
-    } catch (error) {
-        // left blank 
-    }
-    hamburgerMenu.classList.remove('clickedBurger');
-    document.getElementById('midSectionWrapper').classList.remove('openedMenu');
-
-    var previousActiveTab = document.getElementById(currentActiveTab);
-    var previousTabNumber = Number(previousActiveTab.getAttribute('data-number'));
-
-    var newActiveTab = document.getElementById(newActiveTab.id);
-    var newTabNumber = Number(newActiveTab.getAttribute('data-number'));
-
-    if (newTabNumber != previousTabNumber) {
-
-        if ((scrollState == 'naturalScroll') && (doneForcedScrolling)) {
-
-            newActiveTab.classList.add('currentTab');
-            if ((previousTabNumber != 0) && (previousTabNumber != newTabNumber)) {
-                previousActiveTab.classList.remove('currentTab');
-                previousActiveTab.querySelector('.bigSectionBubble').classList.add('noSized');
-                previousActiveTab.querySelector('.smallSectionBubble').classList.add('noSized');
-            }
-            if ((newTabNumber != 0) && (previousTabNumber != newTabNumber)) {
-                newActiveTab.querySelector('.bigSectionBubble').classList.remove('noSized');
-                newActiveTab.querySelector('.smallSectionBubble').classList.remove('noSized');
-            }
-            var targetScrollElement = newActiveTab.getAttribute('data-section');
-
-            if ((newTabNumber != previousTabNumber)) {
-                currentActiveTab = newActiveTab.id;
-            }
-
-        } else if (doneForcedScrolling) {
-            doneForcedScrolling = false;
-            const passiveOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.99,
-            };
-
-            var targetScrollElement = document.getElementById(newActiveTab.getAttribute('data-section'));
-            const passiveObserver = new IntersectionObserver(passiveIntersection, passiveOptions);
-            passiveObserver.observe(targetScrollElement);
-
-            if ((previousTabNumber != newTabNumber)) {
-                newActiveTab.classList.toggle('currentTab');
-                if (newTabNumber != 0) {
-                    newActiveTab.querySelector('.bigSectionBubble').classList.toggle('noSized');
-                    newActiveTab.querySelector('.smallSectionBubble').classList.toggle('noSized');
-                }
-                if (previousTabNumber != 0) {
-                    previousActiveTab.classList.toggle('currentTab');
-                    previousActiveTab.querySelector('.bigSectionBubble').classList.toggle('noSized');
-                    previousActiveTab.querySelector('.smallSectionBubble').classList.toggle('noSized');
-                }
-            }
-
-            var targetScrollElement = newActiveTab.getAttribute('data-section');
-            document.getElementById(targetScrollElement).scrollIntoView(({ behavior: "smooth", block: "end", inline: "nearest" }));
-
-            if ((newTabNumber != previousTabNumber)) {
-                currentActiveTab = newActiveTab.id;
-            }
-        }
-    }
-}
 
 
-let doneForcedScrolling = true;
 
-function passiveIntersection(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            doneForcedScrolling = true;
-            observer.unobserve(entry.target);
-        }
-    });
-}
+
