@@ -447,7 +447,7 @@ scroll-snap-type:y mandatory;
         --title-size: 28px;
         --text-size: 24px;
         --body-text:18px;
-        --splash-text:18px;
+        --splash-text:17px;
         --face-tile:20px;
         --bottom-text:12px;
         --logo-height:88px;
@@ -589,8 +589,6 @@ scroll-snap-type:y mandatory;
     height: fit-content;
     width: 100%;
     overflow: hidden;
-    margin-top: 80px;
-    margin-bottom: 80px;
 }
 
 .newsRoller {
@@ -641,7 +639,7 @@ scroll-snap-type:y mandatory;
 }
 
 .faceAndText {
-    margin: 40px;
+    margin: 30px;
 }
 
 
