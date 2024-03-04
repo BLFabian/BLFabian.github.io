@@ -831,7 +831,7 @@ transition:transform 350ms ease-in-out;
     opacity:1;
     width:var(--uc3m-size);
     margin-top:calc(var(--uc3m-size)/10);
-    margin-right:calc(var(--uc3m-size)/6);
+    margin-right:calc(var(--uc3m-size)/4);
     height:calc(var(--uc3m-size)/2);
     position:fixed;
     right:0;
