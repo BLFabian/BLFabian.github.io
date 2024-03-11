@@ -189,7 +189,7 @@ function makeActive(newActiveTab, scrollState) {
             const passiveOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.59,
+                threshold: 0.99,
             };
 
             var targetScrollElement = document.getElementById(newActiveTab.getAttribute('data-section'));
