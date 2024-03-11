@@ -241,8 +241,10 @@ function passiveIntersection(entries, observer) {
 }
 
 function disableScroll() {
+    if(window.innerHeight > window.innerWidth){
     // Prevent default behavior for scroll events
     document.getElementById('trueBodyContent').style.overflowY = 'hidden';
+    }
 }
 
 // Function to enable scrolling
