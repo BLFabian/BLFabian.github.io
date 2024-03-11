@@ -1,5 +1,3 @@
-var numberOfPages = 7;
-var currentPage = 0;
 var toTheLeft = true;
 var tabArray = [{ name: 'introContent', active: false }, { name: 'solutionTab', active: false }, { name: 'researchTab', active: false }, { name: 'aboutTab', active: false }, { name: 'teamTab', active: false }, { name: 'contactTab', active: false }];
 var currentActiveTab = 'logoBox';
@@ -228,7 +226,7 @@ function makeActive(newActiveTab, scrollState) {
 }
 
 
-let doneForcedScrolling = true;
+var doneForcedScrolling = true;
 
 function passiveIntersection(entries, observer) {
     entries.forEach(entry => {
@@ -241,7 +239,8 @@ function passiveIntersection(entries, observer) {
 }
 
 function disableScroll() {
-    if(window.innerHeight < window.innerWidth){
+    var avoidBadScrollingIntoView = window.matchMedia("(orientation: portrait)").matches;
+    if(!avoidBadScrollingIntoView){
     // Prevent default behavior for scroll events
     document.getElementById('trueBodyContent').style.overflowY = 'hidden';
     }
@@ -249,7 +248,8 @@ function disableScroll() {
 
 // Function to enable scrolling
 function enableScroll() {
-    if(window.innerHeight < window.innerWidth){
+    var avoidBadScrollingIntoView = window.matchMedia("(orientation: portrait)").matches;
+    if(!avoidBadScrollingIntoView){
     // Re-enable scrolling
     document.getElementById('trueBodyContent').style.overflowY = 'scroll';
     }
