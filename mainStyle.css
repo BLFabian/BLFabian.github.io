@@ -660,6 +660,10 @@ flex-direction:row-reverse;
     margin-right: 20px;
       }
 
+      .faceAndText:nth-of-type(2n)   .iconFlex {
+        flex-direction:row-reverse;
+      }
+
       #steffen .faceImage {
         background: url('images/faces/steffen.jpg') center center/contain no-repeat;
     }
@@ -679,11 +683,25 @@ flex-direction:row-reverse;
     font-size:var(--face-title);
 }
 
-.linkedIn {
+.smallClickableIcon {
     height:calc(var(--face-title)*0.8);
     width:calc(var(--face-title)*0.8);
+    margin-left: calc(var(--face-title)*0.1);
+    margin-right: calc(var(--face-title)*0.1);
     display:block;
+}
+
+.linkedIn {
     background: url('images/logos/linkedin.png') center center/contain no-repeat;
+}
+
+.emailIcon {
+    width:calc(var(--face-title)*1.1);
+    background: url('images/logos/emailIcon.png') center center/contain no-repeat;
+}
+
+.iconFlex {
+    display:flex;
 }
 
 .faceContent {
