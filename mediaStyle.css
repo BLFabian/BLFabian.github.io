@@ -199,6 +199,7 @@
     height:100px;
     min-height: 100px;
     flex-direction: column;
+    position:absolute;
 }
 
 .fullPage {
@@ -398,6 +399,7 @@ align-items: center;
     height: calc(100% - 100px);
 scroll-snap-type:y mandatory;
 bottom:0;
+position:absolute;
 }
 
 .bigContent {
