@@ -168,7 +168,6 @@ function makeActive(newActiveTab, scrollState) {
     if (newTabNumber != previousTabNumber) {
 
         if ((scrollState == 'naturalScroll') && (doneForcedScrolling)) {
-            console.log('naturalScroll & doneForcedScrolling');
 
             newActiveTab.classList.add('currentTab');
             if ((previousTabNumber != 0) && (previousTabNumber != newTabNumber)) {
@@ -188,7 +187,6 @@ function makeActive(newActiveTab, scrollState) {
 
         } else if (doneForcedScrolling) {
             disableScroll();
-            console.log('UNATURLIG & doneForcedScrolling');
             doneForcedScrolling = false;
             const passiveOptions = {
                 root: null,
