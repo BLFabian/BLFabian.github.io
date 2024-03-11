@@ -880,6 +880,7 @@ transition:transform 350ms ease-in-out;
     height:calc(var(--uc3m-size)/2);
     position:fixed;
     right:0;
+    top:0;
     background-image:url(images/logos/uc3mwhite.png);
     background-size:contain;
     background-position:center;
