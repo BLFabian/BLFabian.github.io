@@ -580,28 +580,11 @@ right: -23px;
     height:262px;
 }
 
-.sideText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight:bold;
-    font-size:calc(var(--title-size)*1.6);
-    writing-mode: vertical-lr;
-    letter-spacing: 5px;
-}
-
-.centerText {
-    justify-content:center;
-    align-items:center;
-}
-
 
 .teamBox {
     width:84%;
     padding-left:8%;
     padding-right:8%;
-   display:flex;
 }
 .faceContainer {
     display:flex;
@@ -660,9 +643,6 @@ flex-direction:row-reverse;
     margin-right: 20px;
       }
 
-      #steffen .faceImage {
-        background: url('images/faces/steffen.jpg') center center/contain no-repeat;
-    }
 #ruben .faceImage {
     background: url('images/faces/ruben.jpg') center center/contain no-repeat;
 }
@@ -692,11 +672,6 @@ flex-direction:row-reverse;
 
 .flyInRight {
     animation: fliesInRight 500ms ease-in-out forwards;
-}
-
-.scaleOut {
-    transform-origin:top;
-    animation: scalesOut 500ms ease-in-out forwards;
 }
 
 .flyInLeft {

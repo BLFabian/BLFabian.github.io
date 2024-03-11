@@ -44,12 +44,9 @@ function generateBubble() {
 
 function makeActive(newActiveTab) {
 
-    try {
-        event.preventDefault();
-    } catch (error) {
-        // left blank
-    }
+    event.preventDefault();
 
+    hamburgerMenu.classList.remove('clickedBurger');
     document.getElementById('midSectionWrapper').classList.remove('openedMenu');
 
     var previousActiveTab = document.getElementById(currentActiveTab);

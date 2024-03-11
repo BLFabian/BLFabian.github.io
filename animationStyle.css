@@ -283,6 +283,15 @@
     }
 }
 
+@keyframes scalesOut {
+    0% {
+        transform:scaleY(0);
+    }
+    100% {
+        transform:scaleY(1);
+    }
+}
+
 @keyframes fliesInLeft {
     0% {
         transform:translateX(-30%);
