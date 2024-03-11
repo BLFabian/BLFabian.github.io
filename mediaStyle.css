@@ -199,7 +199,6 @@
     height:100px;
     min-height: 100px;
     flex-direction: column;
-    position:fixed;
 }
 
 .fullPage {
@@ -398,7 +397,6 @@ align-items: center;
 .trueBodyContent {
     height: calc(100% - 100px);
 scroll-snap-type:y mandatory;
-position:fixed;
 bottom:0;
 }
 
