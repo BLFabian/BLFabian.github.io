@@ -168,6 +168,7 @@ function makeActive(newActiveTab, scrollState) {
     if (newTabNumber != previousTabNumber) {
 
         if ((scrollState == 'naturalScroll') && (doneForcedScrolling)) {
+            console.log('naturalScroll & doneForcedScrolling');
 
             newActiveTab.classList.add('currentTab');
             if ((previousTabNumber != 0) && (previousTabNumber != newTabNumber)) {
@@ -186,6 +187,8 @@ function makeActive(newActiveTab, scrollState) {
             }
 
         } else if (doneForcedScrolling) {
+            disableScroll();
+            console.log('UNATURLIG & doneForcedScrolling');
             doneForcedScrolling = false;
             const passiveOptions = {
                 root: null,
@@ -222,7 +225,7 @@ function makeActive(newActiveTab, scrollState) {
             if ((newTabNumber != previousTabNumber)) {
                 currentActiveTab = newActiveTab.id;
             }
-        }
+        } 
     }
 }
 
@@ -232,8 +235,20 @@ let doneForcedScrolling = true;
 function passiveIntersection(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            enableScroll();
             doneForcedScrolling = true;
             observer.unobserve(entry.target);
         }
     });
+}
+
+function disableScroll() {
+    // Prevent default behavior for scroll events
+    document.getElementById('trueBodyContent').style.overflowY = 'hidden';
+}
+
+// Function to enable scrolling
+function enableScroll() {
+    // Re-enable scrolling
+    document.getElementById('trueBodyContent').style.overflowY = 'scroll';
 }
