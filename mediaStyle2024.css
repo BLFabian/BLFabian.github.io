@@ -337,7 +337,7 @@
 }
 
 .hiiliGrade {
-    height:40px;
+    width:40px;
 }
 
 .gradeBox {
@@ -346,16 +346,16 @@
 }
 
 .letterBox , .triangleBox , .coloredBox {
-    height: 40px;
+    width: 40px;
 }
 
 .triangleBox {
-    width: 40px;
-    left: -25px;
+    height: 40px;
+    bottom: -25px;
 }
 .letterBox {
     font-size:20px;
-    animation: swappingLetterWidthsMobile 9s linear infinite, swappingLetterColors 9s linear infinite;
+    animation: swappingLetterHeightsMobile 6s linear infinite, swappingLetterColors 6s linear infinite;
 }
 
 .illustrationContent {
@@ -366,6 +366,7 @@
     height: 80px;
     margin-top: 50px;
     margin-bottom: 50px;
+    width:60%;
 }
 
 .faceImage {
