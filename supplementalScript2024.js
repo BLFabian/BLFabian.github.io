@@ -260,5 +260,6 @@ function checkHeights() {
     console.log('outerHeight:' + window.outerHeight);
     console.log('clientHeight:' + window.clientHeight);
     console.log('scrollHeight:' + window.scrollHeight);
-
 }
+
+checkHeights();
