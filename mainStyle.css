@@ -268,7 +268,7 @@ body {
     background:var(--splash-background);
     border-radius:15px;
     padding:50px 60px 60px 50px;
-    display:flex;
+    display:block;
     flex-direction:column;
     justify-content:center;
     align-items:center;
@@ -284,7 +284,7 @@ body {
 .textBox {
     height:fit-content;
     font-size:var(--text-size);
-    display:flex;
+    display:block;
     flex-direction:column;
     justify-content:center;
     align-items:flex-start; 
@@ -516,16 +516,16 @@ box-shadow:-1px 1px 0px 1px var(--secondary-color);
 
 .gradeContainer {
     display:flex;
-    margin-top:calc(var(--box-margin)/2.25);
 }
 
 .hiiliGrade {
 position:relative;
-display:flex;
-height:50px;
-width:fit-content;
+display:block;
+height: fit-content;
+width: 50px;
 overflow: hidden;
 right: -23px;
+filter: drop-shadow(2px 0px 6px rgb(0, 0, 0, 0.7));
 }
 
 .gradeBox {
@@ -538,9 +538,8 @@ right: -23px;
 }
 .coloredBox {
     position:relative;
-    height:50px;
-    width:inherit;
-    display:flex;
+    height: inherit;
+    display:block;
     width:fit-content;
 }
 
@@ -552,7 +551,7 @@ right: -23px;
     z-index:5;
     height:50px;
     width:50px;
-    animation: swappingLetterWidths 9s linear infinite, swappingLetterColors 9s linear infinite;
+    animation: swappingLetterHeights 6s linear infinite, swappingLetterColors 6s linear infinite;
     justify-content:center;
     align-items:center;
     display:flex;
@@ -560,7 +559,7 @@ right: -23px;
 
 .letterBox::after {
     content:"A";
-    animation: swappingLetterGrades 9s linear infinite;
+    animation: swappingLetterGrades 6s linear infinite;
 }
 
 .letterBox , .triangleBox {
@@ -572,8 +571,8 @@ right: -23px;
     width:50px;
     position:relative;
     transform:rotate(45deg);
-    left: -35px;
-    animation: swappingLetterColors 9s linear infinite;
+    bottom: -35px;
+    animation: swappingLetterColors 6s linear infinite;
 }
 
 .newsRoller {

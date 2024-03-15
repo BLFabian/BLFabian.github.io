@@ -204,6 +204,7 @@
 
 .fullPage {
     flex-direction:column;
+    display:block;
 }
 
 .menuLine {
