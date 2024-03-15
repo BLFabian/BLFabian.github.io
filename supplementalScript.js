@@ -143,6 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(targetElement);
     });
 
+    //Scroll it into view to avoid viewport differences
+    document.getElementById('introContent').scrollIntoView(({ behavior: "instant", block: "end", inline: "nearest" }));
 
 });
 
