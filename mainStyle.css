@@ -4,6 +4,8 @@ html {
     scroll-behavior: smooth;
     width: 100%;
     height: 100%;
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 :root {
@@ -29,6 +31,7 @@ html {
     --background-color:white;
     -webkit-tap-highlight-color: transparent;
   --up-and-away:scale(0.7) translateY(50px);
+  --vh: 100vh;
 
 
 }
