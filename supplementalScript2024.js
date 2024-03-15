@@ -227,3 +227,7 @@ function enableScroll() {
     document.getElementById('trueBodyContent').style.overflowY = 'scroll';
     }
 }
+
+if('virtualKeyboard' in navigator) {
+    navigator.virtualKeyboard.overlaysContent = true;
+  }
