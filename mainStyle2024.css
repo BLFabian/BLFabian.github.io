@@ -225,17 +225,15 @@ body {
     overflow-y: scroll;
     position:relative;
 }
-
-    /* Hide scrollbar for Chrome, Safari and Opera */
+/*
     .trueBodyContent::-webkit-scrollbar {
         display: none;
       }
       
-      /* Hide scrollbar for IE, Edge and Firefox */
       .trueBodyContent{
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-      }
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+      } */
 
 .trueBodyContent {
     scroll-snap-type:y mandatory;
