@@ -253,3 +253,12 @@ function enableScroll() {
     document.getElementById('trueBodyContent').style.overflowY = 'scroll';
     }
 }
+
+function checkHeights() {
+    console.log('innerHeight:' + window.innerHeight);
+    console.log('offsetHeight:' + window.offsetHeight);
+    console.log('outerHeight:' + window.outerHeight);
+    console.log('clientHeight:' + window.clientHeight);
+    console.log('scrollHeight:' + window.scrollHeight);
+
+}
