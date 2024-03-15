@@ -225,7 +225,7 @@ body {
     overflow-y: scroll;
     position:relative;
 }
-/*
+
     .trueBodyContent::-webkit-scrollbar {
         display: none;
       }
@@ -233,7 +233,7 @@ body {
       .trueBodyContent{
         -ms-overflow-style: none; 
         scrollbar-width: none; 
-      } */
+      } 
 
 .trueBodyContent {
     scroll-snap-type:y mandatory;
