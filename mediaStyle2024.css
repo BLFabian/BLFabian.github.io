@@ -359,13 +359,13 @@
 }
 
 .illustrationContent {
-    width:100%;
+    width:90%;
 }
 
 .trueIllustration {
-    height: 80px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    height: 200px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .faceImage {

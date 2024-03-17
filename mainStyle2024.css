@@ -585,7 +585,7 @@ filter: drop-shadow(2px 0px 6px rgb(0, 0, 0, 0.7));
 }
 
 .trueIllustration {
-    background: url('images/newVisualisation.png') center/contain no-repeat;
+    background: url('images/visualisationTest.png') center/contain no-repeat;
     width:500px;
     height:262px;
 }
