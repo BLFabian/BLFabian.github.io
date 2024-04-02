@@ -204,7 +204,7 @@ body {
     margin-bottom:2px;
 }
 
-.loginButton {
+.signInButton {
     font-size: calc(var(--bottom-text)*1.5);
     margin-bottom:20px;
     text-align:center;
@@ -213,7 +213,7 @@ body {
     color:white;
 }
 
-.loginButton > i {
+.signInButton > i {
     margin-right:7px;
 }
 

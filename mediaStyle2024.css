@@ -192,6 +192,14 @@
         display:none;
     }
 
+    .introContent , .teamContent {
+        border-radius: 0vw 0px 0px 15vh;
+    }
+    
+    .aboutContent {
+        border-radius: 15vh 0px 0px 0px;
+    }
+
 
 .fullMenuBar {
     top:0;
