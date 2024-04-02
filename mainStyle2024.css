@@ -204,6 +204,19 @@ body {
     margin-bottom:2px;
 }
 
+.loginButton {
+    font-size: calc(var(--bottom-text)*1.5);
+    margin-bottom:20px;
+    text-align:center;
+    font-weight:500;
+    text-decoration:none;
+    color:white;
+}
+
+.loginButton > i {
+    margin-right:7px;
+}
+
 .fullPage {
     width:100%;
     height: 100dvh;
@@ -814,6 +827,7 @@ align-items:center;
 .clickedBurger #lineThree .hamburgerLine {
     transform:rotate(-45deg);
 }
+
 
 .mobileBottomSectionWrapper {
     position: absolute;
