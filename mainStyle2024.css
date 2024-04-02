@@ -224,6 +224,9 @@ body {
     overflow-y: scroll;
     position:relative;
     scroll-behavior: smooth;
+    background-image:url('images/background-min.jpg');
+    background-size:cover;
+    padding-left: 10px;
 }
 
     .trueBodyContent::-webkit-scrollbar {
@@ -378,7 +381,7 @@ body {
 }
 
 .whiteContent {
-    background:transparent;
+    background:white;
     --main-text:var(--main-color);
     --inverse-text:white;
     --marker-text:var(--secondary-color);
@@ -386,8 +389,16 @@ body {
     --splash-shadow: var(--secondary-color);
 }
 
+.introContent , .teamContent {
+    border-radius: 0vw 0px 0px 20vw;
+}
+
+.aboutContent {
+    border-radius: 20vw 0px 0px 0px;
+}
+
 .orangeContent {
-    background:var(--secondary-color);
+    background:transparent;
     --main-text:var(--main-color);
     --inverse-text:var(--main-color);
     --marker-text:var(--secondary-color);
@@ -404,7 +415,8 @@ body {
     --splash-shadow: white;
 }
 
-.orangeContent .contentContainer::before {
+
+.orangeContent .contentContainer::before { /*
     z-index:-20;
 display:block;
 background:var(--secondary-color);
@@ -416,10 +428,11 @@ top:0;
 left:0;
 transform:translateY(-100%);
 position:absolute;
-box-shadow:-1px 1px 0px 1px var(--secondary-color);
+box-shadow:-1px 1px 0px 1px var(--secondary-color); */
 }
 
 .orangeContent .contentContainer::after {
+    /*
     z-index:-10;
     display:block;
     background:white;
@@ -431,10 +444,11 @@ box-shadow:-1px 1px 0px 1px var(--secondary-color);
     top:0;
     left:0;
     transform:translateY(-100%);
-    position:absolute;
+    position:absolute; */
 }
 
 .orangeContent + .bigContent  .contentContainer::before {
+    /*
     z-index:-20;
 display:block;
 background:var(--secondary-color);
@@ -445,10 +459,11 @@ content:"";
 top:0;
 left:0;
 position:absolute;
-box-shadow:-1px 1px 0px 1px var(--secondary-color);
+box-shadow:-1px 1px 0px 1px var(--secondary-color); */
 }
 
 .orangeContent + .bigContent  .contentContainer::after {
+    /*
     z-index:-10;
     display:block;
     background:white;
@@ -459,7 +474,7 @@ box-shadow:-1px 1px 0px 1px var(--secondary-color);
     content:"";
     top:0;
     left:0;
-    position:absolute;
+    position:absolute; */
 } 
 
 .illustrationContent {
